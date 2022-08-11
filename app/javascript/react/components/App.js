@@ -1,7 +1,12 @@
-import React from 'react'
+import React from "react";
+import testComponent from "./testComponent";
+import { Route, BrowserRouter } from "react-router-dom";
 
 export const App = (props) => {
-  return (<h1>Make It So React</h1>)
-}
-
-export default App
+  return (
+    <BrowserRouter>
+      <Route path="/" component={testComponent} />
+    </BrowserRouter>
+  );
+};
+export default App;
