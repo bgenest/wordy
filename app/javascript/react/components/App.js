@@ -1,11 +1,15 @@
 import React from "react";
+import wordIndex from "./wordIndex";
 import testComponent from "./testComponent";
-import { Route, BrowserRouter } from "react-router-dom";
+import { Route, BrowserRouter,Switch } from "react-router-dom";
 
 export const App = (props) => {
   return (
     <BrowserRouter>
-      <Route path="/" component={testComponent} />
+    <Switch>
+      <Route exact path="/" component={testComponent} />
+      <Route exact path="/words" component={wordIndex} />
+    </Switch>
     </BrowserRouter>
   );
 };

@@ -1,0 +1,19 @@
+@import "variables.scss";
+
+.word-tile{
+  background-color: $ivory;
+  .title-page{
+    text-transform: lowercase;
+    text-align: center;
+  }
+}
+
+.word-word{
+  text-align: left;
+  text-transform: capitalize;
+  text-decoration: underline;
+}
+
+.word-definition{
+  
+}
