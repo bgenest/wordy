@@ -2,11 +2,14 @@
 
 
 .word-tile{
-  background-color: $ivory;
+  background-color: $blue;
   .title-page{
     text-transform: lowercase;
     text-align: center;
   }
+  border-radius: 2ch;
+  border-color: black;
+  
 }
 
 .title-page{
@@ -21,4 +24,10 @@
   text-align: left;
   text-transform: capitalize;
   text-decoration: underline;
+}
+
+#play-button{
+  background-color: $blue;
+  border-radius: 9ch;
+
 }
