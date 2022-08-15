@@ -26,7 +26,6 @@ export const wordIndex = (props) => {
   };
 
   const wordComponents = wordData.map((word) => {
-    debugger
     wordData;
     return <WordComponent
             word={word.word}

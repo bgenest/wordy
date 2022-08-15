@@ -11,6 +11,8 @@ button{
 .aux_button{
  background-color: $blue; 
  color: $white;
+ border-radius: 5%;
+ text-align: center;
 }
 
 .game_tile{
@@ -19,4 +21,19 @@ button{
 
 .card{
   background-color: $light_green
+}
+
+.menu{
+  color: black;
+  a{
+    color: black;
+  }
+}
+
+#sidebar{
+  background-color: aliceblue;
+}
+
+#internal-link{
+
 }
