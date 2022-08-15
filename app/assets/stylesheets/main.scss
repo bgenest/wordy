@@ -1,0 +1,22 @@
+@import "variables.scss";
+
+body{
+  background-color: $dark_green;
+}
+
+button{
+  color: ivory
+}
+
+.aux_button{
+ background-color: $blue; 
+ color: $white;
+}
+
+.game_tile{
+  color: ivory;
+}
+
+.card{
+  background-color: $light_green
+}
