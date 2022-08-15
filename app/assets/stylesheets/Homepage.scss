@@ -1,5 +1,6 @@
 @import "variables.scss";
 
+
 .word-tile{
   background-color: $ivory;
   .title-page{
@@ -8,12 +9,16 @@
   }
 }
 
+.title-page{
+  text-align: center;
+}
+
+.subtitle{
+  text-align: center;
+}
+
 .word-word{
   text-align: left;
   text-transform: capitalize;
   text-decoration: underline;
-}
-
-.word-definition{
-  
 }

@@ -38,7 +38,11 @@ export const wordIndex = (props) => {
     getWord();
   }, []);
 
-  return <div>{wordComponents}</div>;
+  return (<div>
+          <h1 class="title-page">Welcome to Wurd!</h1>
+          <p class="subtitle">Wurd is the game that's like Wordle, but its not Wordle</p>
+          {wordComponents}
+          </div>);
 };
 
 export default wordIndex;
