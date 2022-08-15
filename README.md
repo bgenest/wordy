@@ -1,24 +1,29 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Wurd 
 
-Things you may want to cover:
+Kinda like Wordle but not really
 
-* Ruby version
+Ruby version 2.7.3
 
-* System dependencies
+## Installation
+* Run ```yarn install```
+* Run ```bundle install```
 
-* Configuration
+## Starting the server
+* Run ```yarn start``` to start the server
+* Run ```rails s``` to start the React front-end
 
-* Database creation
+## Database creation
+* ```bundle exec rake db:create```
+* ```bundle exec rake db:migrate```
+* ```bundle exec rake db:seed```
 
-* Database initialization
+## Heroku website
+TBD
 
-* How to run the test suite
+# Features
+TBD
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# Authors
+* Bryan Genest
