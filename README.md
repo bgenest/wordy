@@ -1,8 +1,9 @@
 # README
 
-# Wurd 
+# Wordy 
 
-Kinda like Wordle but not really
+Kinda like Wordle but not really.
+This app will be a full-site clone of the popular game Wordle.
 
 Ruby version 2.7.3
 
