@@ -3,7 +3,10 @@ Rails.application.routes.draw do
   root 'homes#index'
   devise_for :users
 
-  resources :game_sessions, only: [:index, :create, :show, :new]
+  resources :sessions, only: [:index, :create, :show, :new]
+  resources :users, only: [:index, :create, :show, :new]
+  resources :games, only: [:index, :create, :show, :new]
+  resources :guesses, only: [:index, :create, :show, :new]
 
   get "/words", to:"homes#index"
 
