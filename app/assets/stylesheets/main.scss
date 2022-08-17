@@ -23,7 +23,11 @@ button{
   background-color: $dark-green;
   border-radius: 2ch;
   border-color: black;
-  
+  text-align: center;
+}
+
+.card-container{
+  width: 150px;
 }
 
 .menu{
@@ -39,4 +43,8 @@ button{
 
 #internal-link{
 
+}
+
+.title{
+  text-align: center;
 }

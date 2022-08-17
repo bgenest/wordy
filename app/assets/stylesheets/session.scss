@@ -1,0 +1,26 @@
+@import "variables.scss";
+
+
+
+#letter{
+
+  color: white;
+  padding-inline: 1%;
+
+}
+
+.submit_button{
+  width: fit-content;
+  align-content: center;
+  background-color: $blue;
+
+}
+input{
+  border-radius: 1ch;
+  height: 50px;
+  width: 50px;
+}
+
+.game-card-container{
+  width: 300px;
+}
