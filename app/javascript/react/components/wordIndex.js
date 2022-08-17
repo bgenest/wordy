@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
+
 import WordComponent from "./WordComponent";
+
 
 export const wordIndex = (props) => {
   const [wordData, setWordData] = useState([]);
@@ -48,7 +50,7 @@ export const wordIndex = (props) => {
       </p>
       <br/>
       <div class="cell">
-        <a class="cell button" href="game_sessions/new" id="play-button">
+        <a class="cell button" href="sessions/new" id="play-button">
           Play!
         </a>
       </div>
