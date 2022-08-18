@@ -43,7 +43,7 @@ export const wordIndex = (props) => {
   return (
     <div class="grid-container fluid">
       <div class="grid-x">
-        <br />
+        <div> </div>
         <h1 class=" cell title-page">Welcome to Wordy!</h1>
         <p class="cell subtitle">
           Wordy is the game that's like Wordle, but its not Wordle.
@@ -52,6 +52,7 @@ export const wordIndex = (props) => {
       </div>
       <div className="grid-x">
         <div className="cell play-button-container">
+          <br/>
           <a
             className="button cell float-center "
             href="sessions/new"
@@ -59,6 +60,7 @@ export const wordIndex = (props) => {
           >
             Play!
           </a>
+          <br />
         </div>
       </div>
       <div className="grid-x">

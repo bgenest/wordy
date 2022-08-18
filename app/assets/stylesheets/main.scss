@@ -4,15 +4,25 @@ body{
   background-color: $light_green;
 }
 
-button{
-  color: ivory
+
+
+button {
+  transition-duration: 2s;
+}
+
+button:hover {
+  background-color: #4CAF50; /* Green */
+  color: white;
 }
 
 .aux_button{
  background-color: $blue; 
  color: $white;
- border-radius: 5%;
+ border-radius: 1ch;
  text-align: center;
+ width: auto;
+
+ 
 }
 
 .game_tile{
@@ -52,3 +62,4 @@ button{
 .title{
   text-align: center;
 }
+
