@@ -1,28 +1,75 @@
 @import "variables.scss";
 
-body{
+body {
   background-color: $light_green;
 }
 
-button{
-  color: ivory
+
+
+button {
+  transition-duration: 2s;
 }
 
-.aux_button{
- background-color: $blue; 
- color: $white;
- border-radius: 5%;
- text-align: center;
+button:hover {
+  background-color: #4CAF50;
+  /* Green */
+  color: white;
 }
 
-.game_tile{
+.aux_button {
+  background-color: $blue;
+  color: $white;
+  border-radius: 1ch;
+  text-align: center;
+  width: auto;
+
+
+}
+
+.game_tile {
   color: ivory;
   width: 200px;
   max-width: 200px;
   height: 300px;
+
+
 }
 
-.card{
+#index {
+  color: black;
+  background-color: $dark-green;
+}
+
+#guesses {
+  font-weight: bold;
+  text-transform: uppercase;
+
+
+
+}
+
+#guesses-card {
+
+  color: black;
+  width: 100px;
+}
+
+#index-card-title{
+  font-weight: bolder;
+}
+
+
+#guesses-title {
+  font-size: larger;
+}
+
+#answer {
+  text-transform: uppercase;
+  font-weight: bolder;
+}
+
+
+.card {
   background-color: $dark-green;
   border-radius: 2ch;
   border-color: $blue;
@@ -30,25 +77,26 @@ button{
   text-align: center;
 }
 
-#card-divider{
+#card-divider {
   text-align: center;
 }
 
-.card-container{
+.card-container {
   width: 150px;
 }
 
-.menu{
+.menu {
   color: black;
-  a{
+
+  a {
     color: black;
   }
 }
 
-#sidebar{
+#sidebar {
   background-color: aliceblue;
 }
 
-.title{
+.title {
   text-align: center;
 }

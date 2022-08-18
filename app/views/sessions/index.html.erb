@@ -1,27 +1,31 @@
 <br/>
-<div
-  class="grid-x grid-padding-x grid-padding-y">
-
-  <%# <div class="cell small-2">
-          <%= link_to "New Game", "sessions/new", method: :get, id:"internal-link" %>
+<div class="grid-x grid-padding-x grid-padding-y">
 
   <% @sessions.each do |session|%>
 
-  <ul class="card game_tile">
+  <ul class="card game_tile" id="index">
+    <h4 id="index-card-title">
+    Game id:
+      <%=session.game.id%></h4>
 
-    <h4>Game id:<%=session.game.id%></h4>
+    <div class='float-center' id="guesses-card">
+      <p class="card-divder" id="guesses-title">Guesses:</p>
 
-    <p id="card-divder">Guesses!</p>
+      <ul style="list-style-type:none" class="float-center" id="guesses">
 
-    <ol>
-      <%session.guesses.each do |guess|%>
+        <%session.guesses.each do |guess|%>
 
-      <li><%=guess.guess%></li>
+        <li><%=guess.guess%></li>
 
-      <%end%>
-    </ol>
-    <p class="cell">
-      Answer:
+        <%end%>
+
+      </ul>
+    </div>
+
+    <br/>
+    Answer:
+    <p class="cell " id="answer">
+
       <%=session.game.answer%></p>
   </ul>
   <%end%>
