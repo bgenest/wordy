@@ -2,11 +2,10 @@ import React, { useState, useEffect } from "react";
 
 import WordComponent from "./WordComponent";
 
-
 export const wordIndex = (props) => {
   const [wordData, setWordData] = useState([]);
 
-  let testWord = "east";
+  let testWord = "word";
 
   const getWord = async () => {
     try {
@@ -42,20 +41,30 @@ export const wordIndex = (props) => {
   }, []);
 
   return (
-    <div class="grid-container grid-padding-x">
-      <br/>
-      <h1 class=" cell title-page">Welcome to Wordy!</h1>
-      <p class="cell subtitle">
-        Wordy is the game that's like Wordle, but its not Wordle.
-      </p>
-      <br/>
-      <div class="cell">
-        <a class="cell button" href="sessions/new" id="play-button">
-          Play!
-        </a>
+    <div class="grid-container fluid">
+      <div class="grid-x">
+        <br />
+        <h1 class=" cell title-page">Welcome to Wordy!</h1>
+        <p class="cell subtitle">
+          Wordy is the game that's like Wordle, but its not Wordle.
+        </p>
+        <br />
       </div>
-      <br/>
-      {wordComponents}
+      <div className="grid-x">
+        <div className="cell play-button-container">
+          <a
+            className="button cell float-center "
+            href="sessions/new"
+            id="play-button"
+          >
+            Play!
+          </a>
+        </div>
+      </div>
+      <div className="grid-x">
+        <div className="cell grid-x align-middle"> {wordComponents[0]}</div>
+      </div>
+      <br />
     </div>
   );
 };
