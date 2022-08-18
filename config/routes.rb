@@ -8,7 +8,12 @@ Rails.application.routes.draw do
   resources :games, only: [:index, :create, :show, :new]
   resources :guesses, only: [:index, :create, :show, :new]
 
-  get "/words", to:"homes#index"
+  namespace :api do
+    namespace :v1 do
+      resources :games, only: [:show] 
+      end
+    end
 
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+    get "/games", to: "games#index"
+
 end
