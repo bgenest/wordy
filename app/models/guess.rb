@@ -1,5 +1,5 @@
 class Guess < ApplicationRecord
-  validates :guess, presence: true
+  validates :word, presence: true
   
   belongs_to :session
   belongs_to :user

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 
 import WordComponent from "./WordComponent";
 
-export const wordIndex = (props) => {
+export const WordIndex = (props) => {
   const [wordData, setWordData] = useState([]);
 
   let testWord = "word";
@@ -71,4 +71,4 @@ export const wordIndex = (props) => {
   );
 };
 
-export default wordIndex;
+export default WordIndex;

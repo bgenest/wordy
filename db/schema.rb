@@ -22,9 +22,9 @@ ActiveRecord::Schema.define(version: 2022_08_18_144808) do
   end
 
   create_table "guesses", force: :cascade do |t|
-    t.string "guess"
-    t.bigint "user_id"
-    t.bigint "session_id"
+    t.string "word", null: false
+    t.bigint "user_id", null: false
+    t.bigint "session_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["session_id"], name: "index_guesses_on_session_id"
@@ -48,7 +48,6 @@ ActiveRecord::Schema.define(version: 2022_08_18_144808) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "session"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
