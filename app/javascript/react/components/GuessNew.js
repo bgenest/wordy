@@ -1,16 +1,17 @@
 import React, { useState, useEffect } from "react";
 
 export const GuessNew = (props) => {
-  const [currentguess, setcurrentGuess] = useState([]);
+  const [currentguess, setCurrentGuess] = useState([]);
 
   const handleChange = (event) => {
-    setcurrentGuess(event.currentTarget.value);
+    setCurrentGuess(event.currentTarget.value);
   };
 
   const handleSubmit = (event) => {
-    let formPayload = { guess: currentguess };
+
+    let formPayload = {guess: currentguess };
     props.submitGuess(event, formPayload);
-    setcurrentGuess("");
+    setCurrentGuess("");
   };
 
   return (
@@ -23,7 +24,7 @@ export const GuessNew = (props) => {
           onChange={handleChange}
           placeholder="Guess the word!"
         />
-        <input class="aux_button" type="submit" value="submit guess" />
+        <input className="aux_button" type="submit" value="submit guess" />
       </form>
     </div>
   );
