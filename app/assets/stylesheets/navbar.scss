@@ -14,3 +14,20 @@
   color:black;
   margin: auto;
 }
+
+.main-button{
+  background-color: $dark-green;
+  text-align: center;
+  width: 100px;
+  border-radius: 5ch;
+  color: black;
+}
+
+.main-button:hover {
+  background-color: $light_green;
+  color: white;
+}
+
+.main-button-text{
+  margin: 5px
+}
