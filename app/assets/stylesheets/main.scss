@@ -17,12 +17,20 @@ button{
 
 .game_tile{
   color: ivory;
+  width: 200px;
+  max-width: 200px;
+  height: 300px;
 }
 
 .card{
   background-color: $dark-green;
   border-radius: 2ch;
-  border-color: black;
+  border-color: $blue;
+  border-width: 4px;
+  text-align: center;
+}
+
+#card-divider{
   text-align: center;
 }
 
@@ -39,10 +47,6 @@ button{
 
 #sidebar{
   background-color: aliceblue;
-}
-
-#internal-link{
-
 }
 
 .title{
