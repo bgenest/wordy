@@ -1,16 +1,5 @@
 @import "variables.scss";
 
-body {
-  background-color: $light_green;
-}
-
-
-
-button {
-  transition-duration: 2s;
-}
-
-button:hover {
   background-color: #4CAF50;
   /* Green */
   color: white;
@@ -23,6 +12,20 @@ button:hover {
   text-align: center;
   width: auto;
 
+
+=======
+  background-color: #4CAF50; /* Green */
+  color: white;
+}
+
+.aux_button{
+ background-color: $blue; 
+ color: $white;
+ border-radius: 1ch;
+ text-align: center;
+ width: auto;
+
+ 
 
 }
 
@@ -100,3 +103,4 @@ button:hover {
 .title {
   text-align: center;
 }
+

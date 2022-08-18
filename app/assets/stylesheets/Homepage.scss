@@ -1,35 +1,35 @@
 @import "variables.scss";
 
 
-.word-tile{
+.word-tile {
   background-color: $blue;
-  .title-page{
-    text-transform: lowercase;
-    text-align: center;
-  }
   border-radius: 2ch;
   border-color: black;
   max-width: 800px;
-  
+  .title-page {
+    text-transform: lowercase;
+    text-align: center;
+  }
+  .word-word {
+    text-align: left;
+    text-transform: capitalize;
+    text-decoration: underline;
+  }
 }
 
-.title-page{
+.title-page {
   text-align: center;
 }
 
-.subtitle{
+.subtitle {
   text-align: center;
 }
 
-.word-word{
-  text-align: left;
-  text-transform: capitalize;
-  text-decoration: underline;
-}
 
-#play-button{
+
+#play-button {
   background-color: $blue;
   border-radius: 9ch;
   max-width: 200px;
-  
+
 }
