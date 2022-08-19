@@ -54,13 +54,12 @@ export const WordIndex = (props) => {
         <div className="cell play-button-container">
           <br/>
           <a
-            className="button cell float-center "
+            className="button-19" role="button"
             href="sessions/new"
             id="play-button"
           >
             Play!
           </a>
-          <br />
         </div>
       </div>
       <div className="grid-x">
