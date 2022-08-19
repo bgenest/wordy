@@ -2,10 +2,9 @@
 
 
 body{
-  background-color: $light_green;
-  /* Green */
+  background-color: $light_paper;
   color: black;
-
+font-family: Arial, Helvetica, sans-serif;
 }
 
 .aux_button {
@@ -16,29 +15,17 @@ body{
   width: auto;
 
 }
-.aux_button{
- background-color: $blue; 
- color: $white;
- border-radius: 1ch;
- text-align: center;
- width: auto;
-
-
-
-}
 
 .game_tile {
   color: ivory;
   width: 200px;
-  max-width: 200px;
+  max-width: 175px;
   height: 300px;
-
-
 }
 
 #index {
   color: black;
-  background-color: $dark-green;
+  background-color: $dark-paper;
 }
 
 #guesses {
@@ -56,7 +43,6 @@ body{
   font-weight: bolder;
 }
 
-
 #guesses-title {
   font-size: larger;
 }
@@ -66,9 +52,8 @@ body{
   font-weight: bolder;
 }
 
-
 .card {
-  background-color: $dark-green;
+  background-color: $dark-paper;
   border-radius: 2ch;
   border-color: $blue;
   border-width: 4px;
@@ -87,10 +72,18 @@ body{
   color: black;
 }
 
-#sidebar {
-  background-color: aliceblue;
-}
-
 .title {
   text-align: center;
+}
+
+#Incorrect{
+  background-color: gray;
+}
+
+#correct-letter-spot{
+  background-color: green;
+}
+
+#correct-letter{
+  background-color: yellow;
 }

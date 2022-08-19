@@ -13,3 +13,23 @@
     border-radius: 5ch;
   }
 }
+
+.guess-display{
+  width: 50px;
+  text-transform: uppercase;
+  font-size: x-large;
+  text-align: center;
+}
+
+.guesses-container{
+  padding-left: 30%;
+
+}
+
+.card-new-game{
+  width: fit-content;
+  height: 500px;
+}
+.submit-field{
+  width: 200px;
+}

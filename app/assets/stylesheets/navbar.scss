@@ -5,18 +5,17 @@
 }
 
 .nav{
-  background-color: $blue;
-  color: White
+  color: black;
 }
 
 .nav-menu{
-  background-color: $ivory;
+  background-color: $dark-paper;
   color:black;
   margin: auto;
 }
 
 .main-button{
-  background-color: $dark-green;
+  background-color: $dark-paper;
   text-align: center;
   width: 100px;
   border-radius: 5ch;
@@ -24,10 +23,14 @@
 }
 
 .main-button:hover {
-  background-color: $light_green;
-  color: white;
+  background-color: $light_paper;
 }
 
 .main-button-text{
   margin: 5px
+}
+
+#nav-bar-menu {
+  color: black;
+  background-color: $blue;
 }
