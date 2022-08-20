@@ -7,7 +7,7 @@ export const GuessTell = (props) => {
   return (
     <div>
       <br/>
-      <div className="cell guess-display float-center" id={props.class}> {props.content}</div>
+      <div className=" guess-display" id={props.class}> {props.content}</div>
     </div>
   )
 

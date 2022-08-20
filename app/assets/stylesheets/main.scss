@@ -11,8 +11,7 @@ font-family: Arial, Helvetica, sans-serif;
   background-color: $blue;
   color: $white;
   border-radius: 1ch;
-  text-align: center;
-  width: auto;
+
 
 }
 
@@ -53,9 +52,9 @@ font-family: Arial, Helvetica, sans-serif;
 }
 
 .card {
-  background-color: $dark-paper;
+  background-color: white;
   border-radius: 2ch;
-  border-color: $blue;
+  border-color: black;
   border-width: 4px;
   text-align: center;
 }

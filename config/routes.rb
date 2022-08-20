@@ -21,5 +21,6 @@ Rails.application.routes.draw do
     end
 
     get "/games", to: "games#index"
+    get "/tutorial", to: "tutorial#index"
 
 end
