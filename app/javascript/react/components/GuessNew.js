@@ -7,7 +7,6 @@ export const GuessNew = (props) => {
   const [currentguess, setCurrentGuess] = useState([]);
   const [guessStatus, setGuessStatus] = useState([]);
   const [guessRender, setGuessRender] = useState([]);
-  const [guessCount, setGuessCount] = useState([0])
 
   const handleChange = (event) => {
     setCurrentGuess(event.currentTarget.value);
@@ -17,28 +16,25 @@ export const GuessNew = (props) => {
   if (props.game.answer != undefined) {
     answer = props.game.answer;
   }
-  
+
   const handleSubmit = (event) => {
-    event.preventDefault(event)
+    event.preventDefault(event);
     answer = helpers.checkGuess(currentguess, answer);
     if (helpers.checkLength(currentguess)) {
       let answerRenderable = helpers.convertToRender(answer);
       let newRenderArray = guessRender.concat(answerRenderable);
-
       setGuessRender(newRenderArray);
       console.log(answer);
       if (answer == true) {
         setGuessStatus("win");
       } else {
-        props.submitGuess(event, currentguess);
+        props.submitGuess(event, answer);
         setCurrentGuess("");
       }
     } else {
       alert("Guessses can only be 6 characters long!");
-    }}
-
-
-    
+    }
+  };
 
   if (guessStatus == "win") {
     alert("You win!");
