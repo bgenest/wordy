@@ -49,9 +49,9 @@ export const GuessNew = (props) => {
   });
 
   return (
-    <div className="grid- cell">
+    <div className="grid-x cell">
       <div className="grid-x">{renderThese}</div>
-
+     <br/>
       <h1>{guessStatus}</h1>
       <form onSubmit={handleSubmit} className=' guess-form'>
         <input

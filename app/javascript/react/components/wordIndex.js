@@ -35,6 +35,7 @@ export const WordIndex = (props) => {
       <WordComponent
         word={word.word}
         definition={word.meanings[0].definitions[0].definition}
+        definition2={word.meanings[0].definitions[1].definition}
       />
     );
   });

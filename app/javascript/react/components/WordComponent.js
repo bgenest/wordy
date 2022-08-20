@@ -5,10 +5,14 @@ export const WordComponent = (props) => {
     <div class="grid-container">
       <div class="grid-x grid-padding-x grid-padding-y word-tile">
         <div class="cell card">
-            <h2 class="title-page">This be a word</h2>
             <div class="card-section">
             <h3 class="word-word">{props.word}:</h3>
-            <p class="word-definition">"{props.definition}"</p>
+            <hr/>
+            <ul>
+              <li class="word-definition">"{props.definition}"</li>
+              <li class="word-definition">"{props.definition2}"</li>
+            </ul>
+            
           </div>
         </div>
       </div>
