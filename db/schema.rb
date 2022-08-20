@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_08_18_144808) do
+ActiveRecord::Schema.define(version: 2022_08_20_014706) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,11 +22,22 @@ ActiveRecord::Schema.define(version: 2022_08_18_144808) do
   end
 
   create_table "guesses", force: :cascade do |t|
-    t.string "word", null: false
     t.bigint "user_id", null: false
     t.bigint "session_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "letter1"
+    t.string "letter2"
+    t.string "letter3"
+    t.string "letter4"
+    t.string "letter5"
+    t.string "letter6"
+    t.string "class1"
+    t.string "class2"
+    t.string "class3"
+    t.string "class4"
+    t.string "class5"
+    t.string "class6"
     t.index ["session_id"], name: "index_guesses_on_session_id"
     t.index ["user_id"], name: "index_guesses_on_user_id"
   end

@@ -1,20 +1,44 @@
 import React, { useState, useEffect } from "react";
 
 import GuessNew from "./GuessNew";
-import GuessTell from "./GuessTell";
 
 export const SessionNew = (props) => {
   const [game, setGame] = useState([]);
   const [guesses, setGuesses] = useState([]);
+  const [errorMessages, setErrorMessages] = useState("");
 
   useEffect(() => {
     getGames();
   }, []);
 
-  const submitGuess = (event, formPayload) => {
+  const submitGuess = async (event, formPayload) => {
     let array = guesses.concat(formPayload);
     event.preventDefault();
     setGuesses(array);
+    if(array.length == 5){
+      array.push(game)
+      try {
+        const response = await fetch(`/api/v1/guesses/`, {
+          credentials: "same-origin",
+          method: "POST",
+          headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(array),
+        });
+        if (!response.ok) {
+          const errorMessage = `${response.status} (${response.statusText})`;
+          setErrorMessages(errorMessage);
+          throw new Error(errorMessage);
+        } 
+      } catch (error) {
+        console.log("error in fetch:", error);
+      }
+
+    }
+
+
   };
 
   const getGames = async () => {
@@ -32,19 +56,18 @@ export const SessionNew = (props) => {
     }
   };
 
-
-
   return (
     <div className="game-card-container float-center">
       <h1 className="title">Wordy </h1>
-      <h5 className="subtitle"> Guesses can only be 6 characters long. Good Luck!</h5>
+      <h5 className="subtitle">
+        {" "}
+        Guesses can only be 6 characters long. Good Luck!
+      </h5>
       <div className="grid-x grid-margin-x">
         <div className="new-game-card float-center">
           <div className="float-center">
             <GuessNew game={game} submitGuess={submitGuess} />
           </div>
-          <br />
-          <ul></ul>
         </div>
       </div>
     </div>
