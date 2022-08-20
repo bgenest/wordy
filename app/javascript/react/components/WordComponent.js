@@ -5,7 +5,7 @@ export const WordComponent = (props) => {
     <div class="grid-container">
       <div class="grid-x grid-padding-x grid-padding-y word-tile">
         <div class="cell card">
-            <h2 class="title-page">Word of the day</h2>
+            <h2 class="title-page">This be a word</h2>
             <div class="card-section">
             <h3 class="word-word">{props.word}:</h3>
             <p class="word-definition">"{props.definition}"</p>
