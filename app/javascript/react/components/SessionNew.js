@@ -60,6 +60,7 @@ export const SessionNew = (props) => {
         {" "}
         Guesses can only be 6 characters long. Good Luck!
       </h5>
+      <hr/>
       <div className="">
         <div className="new-game-card">
           <div className="">

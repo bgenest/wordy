@@ -11,12 +11,9 @@ font-family: Arial, Helvetica, sans-serif;
   background-color: $blue;
   color: $white;
   border-radius: 1ch;
-
-
 }
 
 .game_tile {
-  color: ivory;
   width: 200px;
   max-width: 175px;
   height: 300px;
@@ -24,7 +21,7 @@ font-family: Arial, Helvetica, sans-serif;
 
 #index {
   color: black;
-  background-color: $dark-paper;
+  background-color: white;
 }
 
 #guesses {
@@ -76,13 +73,13 @@ font-family: Arial, Helvetica, sans-serif;
 }
 
 #Incorrect{
-  background-color: gray;
+  background-color: #A9A9A9;
 }
 
 #correct-letter-spot{
-  background-color: green;
+  background-color: #96D294 ;
 }
 
 #correct-letter{
-  background-color: yellow;
+  background-color: #E0D268;
 }
