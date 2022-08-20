@@ -2,7 +2,7 @@
 
 
 .word-tile {
-  background-color: $blue;
+  background-color: $black;
   border-radius: 2ch;
   border-color: black;
   max-width: 800px;
@@ -29,11 +29,12 @@
   background-color: $red;
   border-radius: 9ch;
   max-width: 200px;
+  align-self: center;
   
 }
 
 .word-definition{
-  font-family: cursive;
+  font-family:Arial, Helvetica, sans-serif;
   font-weight: bold;
   font-size: large;
 }
@@ -41,7 +42,6 @@
 .button-19 {
   appearance: button;
   background-color: $blue;
-  border: solid transparent;
   border-radius: 16px;
   border-width: 0 0 4px;
   box-sizing: border-box;
@@ -53,7 +53,7 @@
   font-weight: 700;
   letter-spacing: .8px;
   line-height: 20px;
-  margin: 20px;
+
   outline: none;
   overflow: visible;
   padding: 13px 16px;
@@ -64,7 +64,6 @@
   transition: filter .2s;
   user-select: none;
   -webkit-user-select: none;
-  vertical-align: middle;
   white-space: nowrap;
   width: 100%;
 }

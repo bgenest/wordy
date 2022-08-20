@@ -44,7 +44,7 @@ export const WordIndex = (props) => {
   }, []);
 
   return (
-    <div class="grid-container fluid">
+    <div class="grid-container grid-margin-x fluid">
       <div class="grid-x">
         <div> </div>
         <h1 class=" cell title-page">Welcome to Wordy!</h1>
@@ -53,11 +53,11 @@ export const WordIndex = (props) => {
         </p>
         <br />
       </div>
-      <div className="grid-x">
-        <div className="cell play-button-container">
+      <div className="cell grid-x">
+        <div className="play-button-container float-center">
           <br/>
           <a
-            className="button-19" role="button"
+            className=" button-19" role="button"
             href="sessions/new"
             id="play-button"
           >
@@ -65,6 +65,7 @@ export const WordIndex = (props) => {
           </a>
         </div>
       </div>
+      <br/>
       <div className="grid-x">
         <div className="cell grid-x align-middle"> {wordComponents[0]}</div>
       </div>

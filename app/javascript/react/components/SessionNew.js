@@ -35,10 +35,7 @@ export const SessionNew = (props) => {
       } catch (error) {
         console.log("error in fetch:", error);
       }
-
     }
-
-
   };
 
   const getGames = async () => {
@@ -63,9 +60,9 @@ export const SessionNew = (props) => {
         {" "}
         Guesses can only be 6 characters long. Good Luck!
       </h5>
-      <div className="grid-x grid-margin-x">
-        <div className="new-game-card float-center">
-          <div className="float-center">
+      <div className="">
+        <div className="new-game-card">
+          <div className="">
             <GuessNew game={game} submitGuess={submitGuess} />
           </div>
         </div>
