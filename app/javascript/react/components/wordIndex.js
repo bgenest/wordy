@@ -1,16 +1,19 @@
 import React, { useState, useEffect } from "react";
 
 import WordComponent from "./WordComponent";
+import helpers from "./helpers";
+
 
 export const WordIndex = (props) => {
   const [wordData, setWordData] = useState([]);
 
-  let testWord = "word";
+
+  let wordTile = helpers.randomword()
 
   const getWord = async () => {
     try {
       const response = await fetch(
-        `https://api.dictionaryapi.dev/api/v2/entries/en/${testWord}`
+        `https://api.dictionaryapi.dev/api/v2/entries/en/${wordTile}`
       );
       if (!response.ok) {
         const errorMessage = `${response.status} (${response.statusText})`;

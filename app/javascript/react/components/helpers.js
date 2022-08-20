@@ -1,6 +1,17 @@
+import { WORDS } from "./words";
 import React from "react";
 
+
+
 const helpers = {
+  randomword(){
+  let a = 0
+  let b = WORDS.length
+  let random_index = Math.floor(Math.random()*(b-a+1))+a
+
+  return WORDS[random_index]
+  }
+  ,
   checkGuess(guess, answer) {
     guess = guess.toLowerCase();
     answer = answer.toLowerCase();
