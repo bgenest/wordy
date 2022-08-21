@@ -20,7 +20,7 @@ export const wordIndex = (props) => {
         throw error;
       }
       const responseWordData = await response.json();
-      console.log(responseWordData)
+      console.log(responseWordData);
       setWordData(responseWordData);
     } catch (error) {
       console.error(`Error in fetch: ${error.message}`);
@@ -35,7 +35,6 @@ export const wordIndex = (props) => {
         phonetic={word.phonetic}
         definition={word.meanings[0].definitions[0].definition}
         definition2={word.meanings[0].definitions[1].definition}
-
       />
     );
   });
@@ -72,9 +71,8 @@ export const wordIndex = (props) => {
       <br />
       <div className="grid-x">
         <div className="cell grid-x align-middle">
-
           {wordComponents[0]}
-          
+
           <WeatherTile />
         </div>
       </div>
