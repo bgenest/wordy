@@ -1,12 +1,7 @@
 import React from "react";
 
 const TutorialPage = () => {
+  return <div>TutorialPage.js</div>;
+};
 
-
-return(
-    <div>TutorialPage.js</div>
-)
-
-}
-
-export default TutorialPage
+export default TutorialPage;

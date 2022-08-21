@@ -11,7 +11,6 @@ export const SessionNew = (props) => {
     getGames();
   }, []);
 
-
   const getGames = async () => {
     try {
       const response = await fetch(`/api/v1/games/1`);
@@ -29,13 +28,13 @@ export const SessionNew = (props) => {
 
   return (
     <div className="game-card-container float-center">
-      <br/>
+      <br />
       <h1 className="title">Wordy </h1>
       <h5 className="subtitle">
         {" "}
         Guesses can only be 6 characters long. Good Luck!
       </h5>
-      <hr/>
+      <hr />
       <div className="">
         <div className="new-game-card">
           <div className="">

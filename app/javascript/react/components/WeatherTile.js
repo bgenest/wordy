@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-import WeatherData from "../WeatherData";
+import WeatherData from "./WeatherData";
 
 export const WeatherTile = (props) => {
   const [forecast, setForecast] = useState({

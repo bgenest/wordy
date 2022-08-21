@@ -7,8 +7,7 @@ export const GuessNew = (props) => {
   const [currentguess, setCurrentGuess] = useState([]);
   const [guessStatus, setGuessStatus] = useState([]);
   const [guessRender, setGuessRender] = useState([]);
-  const [count, setCount] = useState(0)
-
+  const [count, setCount] = useState(0);
 
   const handleChange = (event) => {
     setCurrentGuess(event.currentTarget.value);
@@ -20,23 +19,20 @@ export const GuessNew = (props) => {
   }
 
   const handleSubmit = (event) => {
-
     event.preventDefault(event);
     answer = helpers.checkGuess(currentguess, answer);
 
     if (helpers.checkLength(currentguess)) {
-      setCount(count + 1)
+      setCount(count + 1);
       let answerRenderable = helpers.convertToRender(answer);
       let newRenderArray = guessRender.concat(answerRenderable);
       setGuessRender(newRenderArray);
       if (answer === true) {
         setGuessStatus("win");
-
       } else {
-
         setCurrentGuess("");
-        if(count > 3){
-          setGuessStatus("lose")
+        if (count > 3) {
+          setGuessStatus("lose");
         }
       }
     } else {
@@ -46,12 +42,10 @@ export const GuessNew = (props) => {
 
   if (guessStatus == "win") {
     alert(`You won! The word was ${answer}`);
-
   }
 
   if (guessStatus == "lose") {
     alert(`No more guesses! The answer was ${answer}`);
-
   }
 
   const renderThese = guessRender.map((guess) => {
@@ -65,7 +59,7 @@ export const GuessNew = (props) => {
     <div className="grid-x cell">
       <div className="grid-x">{renderThese}</div>
       <br />
-      
+
       <form onSubmit={handleSubmit} className="float-center guess-form">
         <input
           maxLength={6}

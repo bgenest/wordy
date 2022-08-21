@@ -1,28 +1,25 @@
 import { WORDS } from "./words";
 import React from "react";
 
-
-
 const helpers = {
-  randomword(){
-  let a = 0
-  let b = WORDS.length
-  let random_index = Math.floor(Math.random()*(b-a+1))+a
+  randomword() {
+    let a = 0;
+    let b = WORDS.length;
+    let random_index = Math.floor(Math.random() * (b - a + 1)) + a;
 
-  return WORDS[random_index]
-  }
-  ,
+    return WORDS[random_index];
+  },
   checkGuess(guess, answer) {
     guess = guess.toLowerCase();
     answer = answer.toLowerCase();
     if (guess != answer) {
-      return this.newCompare(guess, answer)
+      return this.newCompare(guess, answer);
     } else {
       return true;
     }
   },
   newCompare(guess, answer) {
-    let resultObject = {}
+    let resultObject = {};
     for (let i = 0; i < 6; i++) {
       let letterStatus = "";
 
@@ -36,26 +33,25 @@ const helpers = {
           letterStatus = "correct-letter";
         }
       }
-      resultObject[i]= {i : guess[i], status: letterStatus }
+      resultObject[i] = { i: guess[i], status: letterStatus };
     }
-  return resultObject
+    return resultObject;
   },
-  checkLength(guess){
-    if (guess.length == 6){
-      return true
-    } else{
-      return false
+  checkLength(guess) {
+    if (guess.length == 6) {
+      return true;
+    } else {
+      return false;
     }
   },
-  convertToRender(object){
-    let values = Object.values(object) 
-    let renderArray = []
+  convertToRender(object) {
+    let values = Object.values(object);
+    let renderArray = [];
     values.forEach((value) => {
-      renderArray.push(<div class={value.status}>{value}</div>)
+      renderArray.push(<div class={value.status}>{value}</div>);
     });
-    return renderArray
-  }
-
+    return renderArray;
+  },
 };
 
 export default helpers;
