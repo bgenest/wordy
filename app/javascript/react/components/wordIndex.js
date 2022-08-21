@@ -7,12 +7,12 @@ import helpers from "./helpers";
 export const wordIndex = (props) => {
   const [wordData, setWordData] = useState([]);
 
-  let wordTile = helpers.randomword();
+  let word = helpers.randomword();
 
   const getWord = async () => {
     try {
       const response = await fetch(
-        `https://api.dictionaryapi.dev/api/v2/entries/en/${wordTile}`
+        `https://api.dictionaryapi.dev/api/v2/entries/en/${word}`
       );
       if (!response.ok) {
         const errorMessage = `${response.status} (${response.statusText})`;
@@ -20,6 +20,7 @@ export const wordIndex = (props) => {
         throw error;
       }
       const responseWordData = await response.json();
+      console.log(responseWordData)
       setWordData(responseWordData);
     } catch (error) {
       console.error(`Error in fetch: ${error.message}`);
@@ -31,8 +32,10 @@ export const wordIndex = (props) => {
     return (
       <WordComponent
         word={word.word}
+        phonetic={word.phonetic}
         definition={word.meanings[0].definitions[0].definition}
         definition2={word.meanings[0].definitions[1].definition}
+
       />
     );
   });
