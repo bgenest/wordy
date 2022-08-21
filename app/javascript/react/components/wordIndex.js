@@ -1,14 +1,13 @@
 import React, { useState, useEffect } from "react";
 
 import WordComponent from "./WordComponent";
+import WeatherTile from "./WeatherTile";
 import helpers from "./helpers";
-
 
 export const wordIndex = (props) => {
   const [wordData, setWordData] = useState([]);
 
-
-  let wordTile = helpers.randomword()
+  let wordTile = helpers.randomword();
 
   const getWord = async () => {
     try {
@@ -47,7 +46,7 @@ export const wordIndex = (props) => {
       <div class="grid-x">
         <div> </div>
         <h1 class=" cell title-page">Welcome to Wordy!</h1>
-        <hr/>
+        <hr />
         <h4 class="cell subtitle">
           Wordy is the game that's like Wordle, but its not Wordle.
         </h4>
@@ -55,9 +54,10 @@ export const wordIndex = (props) => {
       </div>
       <div className="cell grid-x">
         <div className="play-button-container float-center">
-          <br/>
+          <br />
           <a
-            className=" button-19" role="button"
+            className=" button-19"
+            role="button"
             href="sessions/new"
             id="play-button"
           >
@@ -65,10 +65,15 @@ export const wordIndex = (props) => {
           </a>
         </div>
       </div>
-      <br/>
-      <br/>
+      <br />
+      <br />
       <div className="grid-x">
-        <div className="cell grid-x align-middle"> {wordComponents[0]}</div>
+        <div className="cell grid-x align-middle">
+
+          {wordComponents[0]}
+          
+          <WeatherTile />
+        </div>
       </div>
       <br />
     </div>
