@@ -21,8 +21,6 @@ export const wordIndex = (props) => {
         throw error;
       }
       const responseWordData = await response.json();
-
-      console.log(responseWordData);
       setWordData(responseWordData);
     } catch (error) {
       console.error(`Error in fetch: ${error.message}`);

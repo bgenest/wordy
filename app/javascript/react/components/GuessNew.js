@@ -24,7 +24,6 @@ export const GuessNew = (props) => {
       let answerRenderable = helpers.convertToRender(answer);
       let newRenderArray = guessRender.concat(answerRenderable);
       setGuessRender(newRenderArray);
-      console.log(answer);
       if (answer == true) {
         setGuessStatus("win");
       } else {
