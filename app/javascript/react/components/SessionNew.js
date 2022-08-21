@@ -11,32 +11,6 @@ export const SessionNew = (props) => {
     getGames();
   }, []);
 
-  const submitGuess = async (event, formPayload) => {
-    let array = guesses.concat(formPayload);
-    event.preventDefault();
-    setGuesses(array);
-    if(array.length == 5){
-      array.push(game)
-      try {
-        const response = await fetch(`/api/v1/guesses/`, {
-          credentials: "same-origin",
-          method: "POST",
-          headers: {
-            Accept: "application/json",
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(array),
-        });
-        if (!response.ok) {
-          const errorMessage = `${response.status} (${response.statusText})`;
-          setErrorMessages(errorMessage);
-          throw new Error(errorMessage);
-        } 
-      } catch (error) {
-        console.log("error in fetch:", error);
-      }
-    }
-  };
 
   const getGames = async () => {
     try {
@@ -65,7 +39,7 @@ export const SessionNew = (props) => {
       <div className="">
         <div className="new-game-card">
           <div className="">
-            <GuessNew game={game} submitGuess={submitGuess} />
+            <GuessNew game={game} />
           </div>
         </div>
       </div>

@@ -11,9 +11,9 @@ class Api::V1::GuessesController < ApplicationController
   end
 
   def create
-    formattedParams = formatPOST(params)
+    # formattedParams = formatPOST(params)
 
-    guess = Guess.new(formattedParams)
+    guess = Guess.new()
     
     if guess.save
       render json: guess
@@ -27,28 +27,28 @@ class Api::V1::GuessesController < ApplicationController
     guess = Guess.new
   end
 
-    def formatPOST (object)
-      formatted_guess = {}
+  # def formatPOST (object)
+  #     formatted_guess = {}
 
-      data = object["_json"]
-      game = data.last
-      data.delete_at(-1)
+  #     data = object["_json"]
+  #     game = data.last
+  #     data.delete_at(-1)
 
-      data.each {|a|
-        index = 0
-        object = {}
-        while index < 6 do
-        formatted_guess {
-        object["letter#{index+1}"] = a["#{index}"]["i"]
-        object["class#{index+1}"] = a["#{index}"]["status"]
-        }
+  #     data.each {|a|
+  #       index = 0
+  #       object = {}
+  #       while index < 6 do
+  #       formatted_guess {
+  #       object["letter#{index+1}"] = a["#{index}"]["i"]
+  #       object["class#{index+1}"] = a["#{index}"]["status"]
+  #       }
      
-        index +=1
+  #       index +=1
 
-        end
-      }
-      return formatted_guess,game
-    end
+  #       end
+  #     }
+  #     return formatted_guess,game
+  #   end
 
   private
 

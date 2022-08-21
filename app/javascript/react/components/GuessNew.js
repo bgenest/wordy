@@ -7,6 +7,8 @@ export const GuessNew = (props) => {
   const [currentguess, setCurrentGuess] = useState([]);
   const [guessStatus, setGuessStatus] = useState([]);
   const [guessRender, setGuessRender] = useState([]);
+  const [count, setCount] = useState(0)
+
 
   const handleChange = (event) => {
     setCurrentGuess(event.currentTarget.value);
@@ -18,17 +20,24 @@ export const GuessNew = (props) => {
   }
 
   const handleSubmit = (event) => {
+
     event.preventDefault(event);
     answer = helpers.checkGuess(currentguess, answer);
+
     if (helpers.checkLength(currentguess)) {
+      setCount(count + 1)
       let answerRenderable = helpers.convertToRender(answer);
       let newRenderArray = guessRender.concat(answerRenderable);
       setGuessRender(newRenderArray);
-      if (answer == true) {
+      if (answer === true) {
         setGuessStatus("win");
+
       } else {
-        props.submitGuess(event, answer);
+
         setCurrentGuess("");
+        if(count > 3){
+          setGuessStatus("lose")
+        }
       }
     } else {
       alert("Guessses can only be 6 characters long!");
@@ -36,8 +45,13 @@ export const GuessNew = (props) => {
   };
 
   if (guessStatus == "win") {
-    alert("You win!");
-    setGuessStatus("Winner!");
+    alert(`You won! The word was ${answer}`);
+
+  }
+
+  if (guessStatus == "lose") {
+    alert(`No more guesses! The answer was ${answer}`);
+
   }
 
   const renderThese = guessRender.map((guess) => {
@@ -50,9 +64,9 @@ export const GuessNew = (props) => {
   return (
     <div className="grid-x cell">
       <div className="grid-x">{renderThese}</div>
-     <br/>
-      <h1>{guessStatus}</h1>
-      <form onSubmit={handleSubmit} className='float-center guess-form'>
+      <br />
+      
+      <form onSubmit={handleSubmit} className="float-center guess-form">
         <input
           maxLength={6}
           type="text"
@@ -62,11 +76,7 @@ export const GuessNew = (props) => {
           placeholder="Guess the word!"
           className="submit-field"
         />
-        <input
-          className="aux_button button-19"
-          type="submit"
-          value="guess"
-        />
+        <input className="aux_button button-19" type="submit" value="guess" />
       </form>
     </div>
   );
