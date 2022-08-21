@@ -19,7 +19,7 @@ export const WeatherTile = (props) => {
     try {
       const city = "boston";
       const response = await fetch(
-        `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${OPEN_WEATHER_API_KEY}&units=imperial`
+        `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${OPEN_WEATHER_API_KEY}&units=imperial`
       );
       if (!response.ok) {
         const errorMessage = `${response.status} (${response.statusText})`;
