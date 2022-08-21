@@ -52,7 +52,7 @@ export const GuessNew = (props) => {
       <div className="grid-x">{renderThese}</div>
      <br/>
       <h1>{guessStatus}</h1>
-      <form onSubmit={handleSubmit} className=' guess-form'>
+      <form onSubmit={handleSubmit} className='float-center guess-form'>
         <input
           maxLength={6}
           type="text"
