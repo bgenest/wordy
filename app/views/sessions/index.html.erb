@@ -1,34 +1,31 @@
 <br/>
 <div class="grid-x grid-padding-x grid-padding-y">
-
-<h1>----------Under Construction!-----------</h1>
-
-
+<h1>UNDER CONSTRUCTION</h1>
   <% @sessions.each do |session|%>
 
-  <ul class="card game_tile" id="index">
+  <div class="card game_tile index">
     <h4 id="index-card-title">
     Game id:
       <%=session.game.id%></h4>
-
-    <div class='float-center' id="guesses-card">
+    <ul class='grid-x cell float-center' id="guesses-card">
       <p class="card-divder" id="guesses-title">Guesses:</p>
 
-      <ul style="list-style-type:none" class="float-center" id="guesses">
-
+      <div style="list-style-type:none" class="grid-x" id="guesses">
         <%session.guesses.each do |guess|%>
-
-        <li><%=guess%></li>
-
+        <p class="cell guess-display" id="<%=guess.class1%>"><%=guess.letter1%></p>
+        <p class = "cell guess-display"id="<%=guess.class2%>"><%=guess.letter2%></p>
+        <p class="cell guess-display" id="<%=guess.class3%>"><%=guess.letter3%></p>
+        <p class="cell guess-display"id="<%=guess.class4%>"><%=guess.letter4%></p>
+        <p class="cell guess-display"id="<%=guess.class5%>"><%=guess.letter5%></p>
         <%end%>
 
-      </ul>
-    </div>
+      </div>
+    </ul>
 
     <br/>
     Answer:
     <p class="cell " id="answer">
 
       <%=session.game.answer%></p>
-  </ul>
+  </div>
   <%end%>

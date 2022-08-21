@@ -4,7 +4,7 @@ import WordComponent from "./WordComponent";
 import helpers from "./helpers";
 
 
-export const WordIndex = (props) => {
+export const wordIndex = (props) => {
   const [wordData, setWordData] = useState([]);
 
 
@@ -75,4 +75,4 @@ export const WordIndex = (props) => {
   );
 };
 
-export default WordIndex;
+export default wordIndex;
