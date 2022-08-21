@@ -22,5 +22,6 @@ Rails.application.routes.draw do
 
     get "/games", to: "games#index"
     get "/tutorial", to: "tutorial#index"
+    get "/api/v1/forecast"
 
 end
