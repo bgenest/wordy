@@ -1,31 +1,40 @@
 <br/>
-<div class="grid-x grid-padding-x grid-padding-y">
-
-  <% @sessions.each do |session|%>
-
-  <div class="card game_tile float-center index">
-    <h4 id="index-card-title">
-    Game id:
-      <%=session.game.id%></h4>
-    <ul class='grid-x cell float-center' id="guesses-card">
-      <p class="card-divder" id="guesses-title">Guesses:</p>
-
-      <div style="list-style-type:none" class="grid-x" id="guesses">
-        <%session.guesses.each do |guess|%>
-        <p class="cell guess-display" id="<%=guess.class1%>"><%=guess.letter1%></p>
-        <p class="cell guess-display" id="<%=guess.class2%>"><%=guess.letter2%></p>
-        <p class="cell guess-display" id="<%=guess.class3%>"><%=guess.letter3%></p>
-        <p class="cell guess-display" id="<%=guess.class4%>"><%=guess.letter4%></p>
-        <p class="cell guess-display" id="<%=guess.class5%>"><%=guess.letter5%></p>
-        <p class="cell guess-display" id="<%=guess.class6%>"><%=guess.letter6%></p>
-        <%end%>
-      </div>
-    </ul>
-
-    <br/>
-    Answer:
-    <p class="cell " id="answer">
-
-      <%=session.game.answer%></p>
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></head>
+  <div>
+    <h1 class="title">Previous Games<i class="fa-solid fa-dice"></i>
+    </h1>
+    <hr/>
   </div>
-  <%end%>
+  <div class="grid-x grid-padding-x grid-padding-y">
+
+    <% @sessions.each do |session|%>
+
+    <div class="card game_tile float-center index">
+      <h3 id="index-card-title">
+        Game id:
+        <%=session.game.id%></h3>
+      <ul class='grid-x cell float-center' id="guesses-card">
+        <p class="card-divder" id="guesses-title">Guesses:</p>
+
+        <div style="list-style-type:none" class="grid-x" id="guesses">
+          <%session.guesses.each do |guess|%>
+          <p class="cell guess-display" id="<%=guess.class1%>"><%=guess.letter1%></p>
+          <p class="cell guess-display" id="<%=guess.class2%>"><%=guess.letter2%></p>
+          <p class="cell guess-display" id="<%=guess.class3%>"><%=guess.letter3%></p>
+          <p class="cell guess-display" id="<%=guess.class4%>"><%=guess.letter4%></p>
+          <p class="cell guess-display" id="<%=guess.class5%>"><%=guess.letter5%></p>
+          <p class="cell guess-display" id="<%=guess.class6%>"><%=guess.letter6%></p>
+          <%end%>
+        </div>
+      </ul>
+
+      <br/>
+      <div class="answer-section">
+        Answer:
+        <p class="cell " id="answer">
+
+          <%=session.game.answer%></p>
+      </div>
+    </div>
+    <%end%>

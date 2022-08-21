@@ -31,7 +31,6 @@ export const WeatherTile = (props) => {
       console.error(`Error in fetch: ${err.message}`);
     }
   };
-  console.log(forecast);
 
   return ( 
   <div class="grid-container">
