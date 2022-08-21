@@ -147,5 +147,5 @@ guess9 = Guess.create(
   class5: "correct-letter-spot",
   class6: "correct-letter-spot",
   user: user1,
-  session: session1
+  session: session2
 )

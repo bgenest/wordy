@@ -1,9 +1,9 @@
 <br/>
 <div class="grid-x grid-padding-x grid-padding-y">
-<h1>UNDER CONSTRUCTION</h1>
+
   <% @sessions.each do |session|%>
 
-  <div class="card game_tile index">
+  <div class="card game_tile float-center index">
     <h4 id="index-card-title">
     Game id:
       <%=session.game.id%></h4>
@@ -13,12 +13,12 @@
       <div style="list-style-type:none" class="grid-x" id="guesses">
         <%session.guesses.each do |guess|%>
         <p class="cell guess-display" id="<%=guess.class1%>"><%=guess.letter1%></p>
-        <p class = "cell guess-display"id="<%=guess.class2%>"><%=guess.letter2%></p>
+        <p class="cell guess-display" id="<%=guess.class2%>"><%=guess.letter2%></p>
         <p class="cell guess-display" id="<%=guess.class3%>"><%=guess.letter3%></p>
-        <p class="cell guess-display"id="<%=guess.class4%>"><%=guess.letter4%></p>
-        <p class="cell guess-display"id="<%=guess.class5%>"><%=guess.letter5%></p>
+        <p class="cell guess-display" id="<%=guess.class4%>"><%=guess.letter4%></p>
+        <p class="cell guess-display" id="<%=guess.class5%>"><%=guess.letter5%></p>
+        <p class="cell guess-display" id="<%=guess.class6%>"><%=guess.letter6%></p>
         <%end%>
-
       </div>
     </ul>
 

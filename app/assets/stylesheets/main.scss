@@ -21,13 +21,17 @@ font-family: Arial, Helvetica, sans-serif;
 .index {
   color: black;
   background-color: white;
-  width:300px;
-  height:fit-content;
+  max-width: 350px;
+  min-width: 350px;
+  max-height: 525px;
+  min-height: 525px;
+
 }
 
 #guesses {
   font-weight: bold;
   text-transform: uppercase;
+  padding-left: 20px;
 }
 
 #guesses-card {
