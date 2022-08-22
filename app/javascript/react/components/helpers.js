@@ -12,10 +12,14 @@ const helpers = {
   checkGuess(guess, answer) {
     guess = guess.toLowerCase();
     answer = answer.toLowerCase();
-    if (guess != answer) {
-      return this.newCompare(guess, answer);
-    } else {
-      return true;
+    if (this.onlyLetters(guess)) {
+      if (guess != answer) {
+        return this.newCompare(guess, answer);
+      } else {
+        return true;
+      }
+    } else{
+      return false
     }
   },
   newCompare(guess, answer) {
@@ -43,6 +47,9 @@ const helpers = {
     } else {
       return false;
     }
+  },
+  onlyLetters(str) {
+    return /^[a-zA-Z]+$/.test(str);
   },
   convertToRender(object) {
     let values = Object.values(object);
