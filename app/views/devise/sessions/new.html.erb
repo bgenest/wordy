@@ -1,40 +1,41 @@
-<div class="grid-x grid-padding-x">
-  <div class="cell">
-    <h2>Log in</h2>
+<br/>
+<div class="card float-center form-card">
+  <div class="cell float-center">
+    <h2 class="float-center">Log in</h2>
   </div>
-</div>
-<hr class="divider">
+
+<hr>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="grid-x grid-padding-x">
-    <div class="small-3 cell large-offset-2">
-      <label class="text-left middle form-label">
+  <div class="grid-x float-center">
+    <div class="">
+      <label class="">
         Email:
       </label>
     </div>
-    <div class="grid-x grid-padding-x">
+    <div class="grid-x forms float-center">
       <% f.label :email %>
       <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
     </div>
   </div>
 
-  <div class="grid-x grid-padding-x">
-    <div class="small-3 cell large-offset-2">
-      <label class="text-left middle form-label">
+  <div class="grid-x float-center">
+    <div class="">
+      <label class="">
         Password:
       </label>
     </div>
-    <div class="grid-x grid-padding-x">
+    <div class="grid-x forms float-center">
       <% f.label :password %>
       <%= f.password_field :password, autocomplete: "current-password" %>
     </div>
   </div>
 
 
-  <div class="grid-x grid-padding-x">
-    <div class="small-3 cell large-offset-2"></div>
+  <div class="grid-x">
+    <div class="grid-x"></div>
     <% if devise_mapping.rememberable? %>
-      <div class="field form-label">
+      <div class="field float-center">
         <%= f.check_box :remember_me %>
         <%= f.label :remember_me %>
       </div>
@@ -42,21 +43,20 @@
   </div>
 
 
-  <div class="grid-x grid-padding-x">
+  <div class="grid-x">
     <div class="cell">
-        <%= f.submit "Log in", class:"aux_button" %>
+        <%= f.submit "Log in", class:"button-19 forms" %>
     </div>
 
-  </div>
-  <br/>
 
-
-  <div class="grid-x grid-padding-x">
+  <div class="grid-x float-center" >
     <div class="cell"></div>
-    <ul class="aux-buttons cell">
+    <ul class=" button-19 button-forms float-center">
       <%= render "devise/shared/links" %>
     </ul>
   </div>
 
 
 <% end %>
+
+</div>
