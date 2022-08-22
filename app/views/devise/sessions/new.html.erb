@@ -3,60 +3,56 @@
   <div class="cell float-center">
     <h2 class="float-center">Log in</h2>
   </div>
-
-<hr>
-
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="grid-x float-center">
-    <div class="">
-      <label class="">
-        Email:
-      </label>
-    </div>
-    <div class="grid-x forms float-center">
-      <% f.label :email %>
-      <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-    </div>
-  </div>
-
-  <div class="grid-x float-center">
-    <div class="">
-      <label class="">
-        Password:
-      </label>
-    </div>
-    <div class="grid-x forms float-center">
-      <% f.label :password %>
-      <%= f.password_field :password, autocomplete: "current-password" %>
-    </div>
-  </div>
-
-
-  <div class="grid-x">
-    <div class="grid-x"></div>
-    <% if devise_mapping.rememberable? %>
-      <div class="field float-center">
-        <%= f.check_box :remember_me %>
-        <%= f.label :remember_me %>
+  <hr/>
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+      <div class="grid-x float-center">
+        <div class="">
+          <label class="">
+            Email:
+          </label>
+        </div>
+        <div class="grid-x forms float-center">
+          <% f.label :email %>
+          <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+        </div>
       </div>
-    <% end %>
-  </div>
+
+      <div class="grid-x float-center">
+        <div class="">
+          <label class="">
+            Password:
+          </label>
+        </div>
+        <div class="grid-x forms float-center">
+          <% f.label :password %>
+          <%= f.password_field :password, autocomplete: "current-password" %>
+        </div>
+      </div>
+
+      <div>
+        <% if devise_mapping.rememberable? %>
+          <div class="checkbox">
+            <%= f.check_box :remember_me %>
+            <%= f.label :remember_me %>
+          </div>
+        <% end %>
+      </div>
+
+      <div class="grid-x">
+        <div class="cell">
+          <%= f.submit "Log in", class:"button-19 forms" %>
+        </div>
+
+        <div class="grid-x float-center">
+          <div class="cell"></div>
+          <ul class=" button-19 button-forms float-center">
+            <li class="button-19">
+            <%= render "devise/shared/links", :class => "button-forms" %>
+            </li>
+          </ul>
+        </div>
 
 
-  <div class="grid-x">
-    <div class="cell">
-        <%= f.submit "Log in", class:"button-19 forms" %>
+      <% end %>
+
     </div>
-
-
-  <div class="grid-x float-center" >
-    <div class="cell"></div>
-    <ul class=" button-19 button-forms float-center">
-      <%= render "devise/shared/links" %>
-    </ul>
-  </div>
-
-
-<% end %>
-
-</div>
