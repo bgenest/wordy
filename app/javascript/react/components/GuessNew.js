@@ -22,7 +22,7 @@ export const GuessNew = (props) => {
     event.preventDefault(event);
     answer = helpers.checkGuess(currentguess, answer);
 
-    if (helpers.checkLength(currentguess)&& answer != false) {
+    if (helpers.checkLength(currentguess) && answer != false) {
       setCount(count + 1);
       let answerRenderable = helpers.convertToRender(answer);
       let newRenderArray = guessRender.concat(answerRenderable);
@@ -36,14 +36,13 @@ export const GuessNew = (props) => {
         }
       }
     } else {
-
       alert("Guessses can only contain letters, and be six characters long!");
     }
   };
 
   if (guessStatus == "win") {
     alert(`You won! The word was ${answer}`);
-    setGuessStatus(`you win! the word was ${answer}` )
+    setGuessStatus(`you win! the word was ${answer}`);
   }
 
   if (guessStatus == "lose") {
