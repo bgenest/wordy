@@ -36,7 +36,7 @@ export const GuessNew = (props) => {
         }
       }
     } else {
-      alert("Guessses can only be 6 characters long!");
+      alert("Guessses can only be six characters long!");
     }
   };
 

@@ -50,7 +50,7 @@ export const wordIndex = (props) => {
         <h1 class=" cell title-page">Welcome to Wordy!</h1>
         <hr />
         <h4 class="cell subtitle">
-          Wordy is the game that's like Wordle, but its not Wordle.
+          Wordy is the game that's like Wordle, but it's not Wordle.
         </h4>
         <br />
       </div>
