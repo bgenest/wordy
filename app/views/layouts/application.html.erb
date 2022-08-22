@@ -22,7 +22,9 @@
       </div>
       
       <section class="top-bar-section nav">
-        
+        <%- if current_user -%>
+        <p>Signed in as <%=current_user.email%></p>
+        <%- end -%>
         <ul class="vertical dropdown menu nav" data-dropdown-menu>
           <li class="nav">
             <a class="button large nav" id="nav-bar-menu"><i class="fa-solid menu-icon"></i></a>

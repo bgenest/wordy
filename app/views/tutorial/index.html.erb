@@ -1,17 +1,30 @@
-<div>
+<br/>
+<div class="grid-x card tutorial float-center">
   <h1>How to Play:</h1>
-
-  <ul>
+  <hr/>
+  <ul class="tutorial-list">
     <li>The name of the game is guessing the secret word, and you only get 5 guesses.
     </li>
-    <li>Each time you guess, the guess will pop up with certian features:
+    <li>Each time you guess, the letters will be highlighted one of 3 colors:
     </li>
-    <li>If the letter is highlighted yellow, its in the word, but not in the correct spot.
+    <li>
+      <br/>
+      <div class="grid-x">
+        <p class=" cell tutorial tutorial-highlighting float-center" id="correct-letter">yellow</p>
+        <p class=" cell tutorial tutorial-highlighting float-center" id="correct-letter-spot">green</p>
+        <p class="cell tutorial tutorial-highlighting float-center" id="Incorrect">gray</p>
+      </div>
     </li>
-    <li>If the letter is highlighted green, its in the word, and its in the correct spot.
+    <br/>
+    <li>If the letter is highlighted yellow, it's in the word, but it's in the incorrect spot.
     </li>
-    <li>However, if the letter is highlighted gray, it's not in the word at all.
+    <li>If the letter is highlighted green, it's in the word, and it's in the correct spot.
     </li>
-
+    <li>However, if the letter is highlighted gray , it's not in the word at all.
+    </li>
+    <li>Good Luck, and Have Fun!
+    </li>
   </ul>
+  <%= link_to "Play!", new_session_path, class: 'button-19 button-forms' %>
+  <br/>
 </div>
