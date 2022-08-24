@@ -1,4 +1,3 @@
-
 class Api::V1::GuessesController < ApplicationController
   protect_from_forgery unless: -> { request.format.json? }
 
@@ -10,14 +9,13 @@ class Api::V1::GuessesController < ApplicationController
     render json: Guess.all
   end
 
-  def create
-    # formattedParams = formatPOST(params)
+  def create    
 
-    guess = Guess.new()
+    formatted_data = formatJson(params)
+    guess = Guess.new(guess_params)
     
     if guess.save
       render json: guess
-
         else
             render json: {error: guess.errors.full_messages}, status: :unprocessable_entity            
         end
@@ -27,33 +25,31 @@ class Api::V1::GuessesController < ApplicationController
     guess = Guess.new
   end
 
-  # def formatPOST (object)
-  #     formatted_guess = {}
+def formatJson (object)
+  limit = 5
+  index = 0
+  user_id = current_user["id"]
+  game_id =  object['game']
+  data_formatted = {}
 
-  #     data = object["_json"]
-  #     game = data.last
-  #     data.delete_at(-1)
+  while index <= limit
+    object['guess']["letter#{index+1}"] = object["#{index}"]['i']
+    object['guess']["class#{index+1}"] = object["#{index}"]['status']
+    index += 1
+  end
 
-  #     data.each {|a|
-  #       index = 0
-  #       object = {}
-  #       while index < 6 do
-  #       formatted_guess {
-  #       object["letter#{index+1}"] = a["#{index}"]["i"]
-  #       object["class#{index+1}"] = a["#{index}"]["status"]
-  #       }
-     
-  #       index +=1
+  guess = object["guess"]
+  guess["guess"]["session"] = Session.find(user:[user_id],game:[game_id])
+  binding.pry
 
-  #       end
-  #     }
-  #     return formatted_guess,game
-  #   end
+end
+
 
   private
 
     def guess_params
-        params.require(:guess).permit(:letter1,:letter2,:letter3,:letter4, :letter5, :letter6,:class1,:class2,:class3,:class4, :class5, :class6)
+        params.require(:guess).permit(:letter1, :letter2, :letter3, :letter4, :letter5, :letter6, 
+                                      :class1, :class2, :class3, :class4, :class5, :class6,:session, :user)
     end
   
 end

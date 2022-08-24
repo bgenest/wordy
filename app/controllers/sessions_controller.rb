@@ -4,11 +4,5 @@ class SessionsController < ApplicationController
     @sessions = Session.all
   end
 
-  def create
-  end
-
-  def new
-  end
-  
 
 end
