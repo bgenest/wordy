@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 import WeatherData from "./WeatherData";
+import configData from "./config.json";
 
 export const WeatherTile = (props) => {
   const [forecast, setForecast] = useState({
@@ -13,9 +14,8 @@ export const WeatherTile = (props) => {
     fetchWeather();
   }, []);
 
-  let OPEN_WEATHER_API_KEY = "c69164a3ec0a0d18a3351042b67b1e31";
-
   const fetchWeather = async () => {
+    let OPEN_WEATHER_API_KEY = configData["OPEN_WEATHER_API_KEY"];
     try {
       const city = "boston";
       const response = await fetch(

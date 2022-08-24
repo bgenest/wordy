@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLightbulb } from "@fortawesome/free-solid-svg-icons";
 
 export const WordComponent = (props) => {
-  console.log(props);
+
   return (
     <div class="grid-container">
       <div class="grid-x grid-padding-x grid-padding-y word-tile">
