@@ -4,11 +4,11 @@ import GuessNew from "./GuessNew";
 
 export const SessionNew = (props) => {
   const [game, setGame] = useState([]);
-  const [guesses, setGuesses] = useState([]);
-  const [errorMessages, setErrorMessages] = useState("");
+  const [errorMessage, setErrorMessages] = useState([])
 
   useEffect(() => {
     getGames();
+    createSession();
   }, []);
 
   const getGames = async () => {
@@ -26,6 +26,53 @@ export const SessionNew = (props) => {
     }
   };
 
+  const createSession = async (event) => {
+    event.preventDefault();
+    let gameObject = {}
+    gameObject["game"] = game
+    try {
+      const response = await fetch(`/api/v1/sessions/`, {
+        credentials: "same-origin",
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(gameObject),
+      });
+      if (!response.ok) {
+        const errorMessage = `${response.status} (${response.statusText})`;
+        setErrorMessages(errorMessage);
+        throw new Error(errorMessage);
+      }
+    } catch (error) {
+      console.log("error in fetch:", error);
+    }
+  };
+  
+  const submitGuess = async (event, formPayload) => {
+    event.preventDefault();
+    formPayload["game"] = game
+    try {
+      const response = await fetch(`/api/v1/guesses/`, {
+        credentials: "same-origin",
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formPayload),
+      });
+      if (!response.ok) {
+        const errorMessage = `${response.status} (${response.statusText})`;
+        setErrorMessages(errorMessage);
+        throw new Error(errorMessage);
+      }
+    } catch (error) {
+      console.log("error in fetch:", error);
+    }
+  };
+
   return (
     <div className="game-card-container float-center">
       <br />
@@ -38,7 +85,7 @@ export const SessionNew = (props) => {
       <div className="">
         <div className="new-game-card">
           <div className="">
-            <GuessNew game={game} />
+            <GuessNew game={game} submitGuess={submitGuess} />
           </div>
         </div>
       </div>

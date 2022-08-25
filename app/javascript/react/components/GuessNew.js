@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
 import helpers from "./helpers";
 import GuessTell from "./GuessTell";
@@ -12,23 +12,23 @@ export const GuessNew = (props) => {
   const handleChange = (event) => {
     setCurrentGuess(event.currentTarget.value);
   };
-
   let answer;
   if (props.game.answer != undefined) {
     answer = props.game.answer;
   }
-
   const handleSubmit = (event) => {
     event.preventDefault(event);
     answer = helpers.checkGuess(currentguess, answer);
-
+    
     if (helpers.checkLength(currentguess) && answer != false) {
       setCount(count + 1);
+      props.submitGuess(event, answer)
       let answerRenderable = helpers.convertToRender(answer);
       let newRenderArray = guessRender.concat(answerRenderable);
       setGuessRender(newRenderArray);
       if (answer === true) {
         setGuessStatus("win");
+
       } else {
         setCurrentGuess("");
         if (count > 3) {
@@ -51,9 +51,8 @@ export const GuessNew = (props) => {
   }
 
   const renderThese = guessRender.map((guess) => {
-    guessRender;
     return (
-      <GuessTell content={guess.props.children.i} class={guess.props.class} />
+      <GuessTell content={guess.props.children} class={guess.props.class} />
     );
   });
 

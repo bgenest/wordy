@@ -1,14 +1,11 @@
 class SessionsController < ApplicationController
 
   def index
-    @sessions = Session.all
+    if current_user
+      user = current_user.id
+      @sessions = Session.where(user: user)
+    end
   end
 
-  def create
-  end
-
-  def new
-  end
-  
 
 end

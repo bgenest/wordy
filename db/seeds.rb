@@ -1,5 +1,5 @@
 game1 = Game.create(answer:"Banana")
-user1 = User.create(email: "test6@gmail.com",password: "111111")
+user1 = User.create(email: "test@gmail.com",password: "111111")
 session1 = Session.create(user: user1, game: game1)
 
 guess1 = Guess.create(

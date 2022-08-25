@@ -8,10 +8,12 @@
   </div>
   <div class="grid-x grid-padding-x grid-padding-y">
 
-    <% @sessions.each do |session|%>
+  <%if @sessions%>
+    <%if @sessions.length > 0 %>
+      <% @sessions.each do |session|%>
 
-    <div class="card game_tile float-center index">
-      <h3 id="index-card-title">
+      <div class="card game_tile float-center index">
+        <h3 id="index-card-title">
         Game:
         <%=session.game.id%></h3>
       <ul class='grid-x cell float-center' id="guesses-card">
@@ -31,10 +33,23 @@
 
       <br/>
       <div class="answer-section">
-        Answer:
-        <p class="cell " id="answer">
 
-          <%=session.game.answer%></p>
+      <%if session.guesses.length >= 5%>
+          Answer:
+          <p class="cell " id="answer">
+            <%=session.game.answer%></p>
+      <%end%>
+  
       </div>
-    </div>
+      </div>
+    <%end%>
+    <%else%>
+    <div class="float-center">
+    <h3>You have no previous games, get playing!</h3>
+    <div>
+    <%end%>
+    <%else%>
+    <div class="float-center">
+      <h3>Welcome! Sign in to view your previous games.</h3>
+    <div>
     <%end%>
