@@ -4,6 +4,7 @@ import GuessNew from "./GuessNew";
 
 export const SessionNew = (props) => {
   const [game, setGame] = useState([]);
+  const [errorMessage, setErrorMessages] = useState([])
 
   useEffect(() => {
     getGames();
@@ -48,8 +49,10 @@ export const SessionNew = (props) => {
       console.log("error in fetch:", error);
     }
   };
+  
   const submitGuess = async (event, formPayload) => {
     event.preventDefault();
+    formPayload["game"] = game
     try {
       const response = await fetch(`/api/v1/guesses/`, {
         credentials: "same-origin",

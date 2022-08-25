@@ -9,11 +9,16 @@ class Api::V1::GuessesController < ApplicationController
     render json: Guess.all
   end
 
-  def create    
-
-    formatted_data = formatJson(params)
+  def create 
     guess = Guess.new(guess_params)
-    
+    guess.user = current_user
+    game = params["game"]
+    existing_session = Session.find_by("user": guess.user, "game_id": game["id"])
+    if existing_session
+      guess.session = existing_session
+    else
+      guess.session = Session.create("user": guess.user, "game_id": game["id"])
+    end
     if guess.save
       render json: guess
         else
@@ -25,31 +30,12 @@ class Api::V1::GuessesController < ApplicationController
     guess = Guess.new
   end
 
-def formatJson (object)
-  limit = 5
-  index = 0
-  user_id = current_user["id"]
-  game_id =  object['game']
-  data_formatted = {}
-
-  while index <= limit
-    object['guess']["letter#{index+1}"] = object["#{index}"]['i']
-    object['guess']["class#{index+1}"] = object["#{index}"]['status']
-    index += 1
-  end
-
-  guess = object["guess"]
-  guess["guess"]["session"] = Session.find(user:[user_id],game:[game_id])
-  binding.pry
-
-end
-
 
   private
 
     def guess_params
-        params.require(:guess).permit(:letter1, :letter2, :letter3, :letter4, :letter5, :letter6, 
-                                      :class1, :class2, :class3, :class4, :class5, :class6,:session, :user)
+        params.require(:guess).permit('letter1', 'letter2', 'letter3', 'letter4', 'letter5', 'letter6', 
+                                      'class1', 'class2', 'class3', 'class4', 'class5', 'class6')
     end
   
 end

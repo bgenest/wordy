@@ -19,6 +19,7 @@ export const GuessNew = (props) => {
   const handleSubmit = (event) => {
     event.preventDefault(event);
     answer = helpers.checkGuess(currentguess, answer);
+    
     if (helpers.checkLength(currentguess) && answer != false) {
       setCount(count + 1);
       props.submitGuess(event, answer)
@@ -50,9 +51,8 @@ export const GuessNew = (props) => {
   }
 
   const renderThese = guessRender.map((guess) => {
-    guessRender;
     return (
-      <GuessTell content={guess.props.children.i} class={guess.props.class} />
+      <GuessTell content={guess.props.children} class={guess.props.class} />
     );
   });
 

@@ -5,18 +5,17 @@ class Api::V1::SessionsController < ApplicationController
   end
 
   def index
+    @sessions = Session.find(user: current_user)
+    binding.pry
 
   end
 
   def new
     @session = Session.new
-    binding.pry
   end
   
 
   def create
-
-    binding.pry
 
     @session = Session.new(params[:session])
     @session.user = current_user
@@ -29,7 +28,4 @@ class Api::V1::SessionsController < ApplicationController
       render 'new'
     end
   end
-
-  
-
 end

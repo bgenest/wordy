@@ -37,7 +37,10 @@ const helpers = {
           letterStatus = "correct-letter";
         }
       }
-      resultObject[i] = { i: guess[i], status: letterStatus };
+      let letterKey = `letter${i+1}`
+      let letterID  = `class${i+1}`
+      resultObject[letterKey] = guess[i] 
+      resultObject[letterID] =  letterStatus ;
     }
     return resultObject;
   },
@@ -52,11 +55,15 @@ const helpers = {
     return /^[a-zA-Z]+$/.test(str);
   },
   convertToRender(object) {
-    let values = Object.values(object);
     let renderArray = [];
-    values.forEach((value) => {
-      renderArray.push(<div class={value.status}>{value}</div>);
-    });
+   
+    renderArray.push(<div class={object[`class1`]}>{object["letter1"]}</div>);
+    renderArray.push(<div class={object[`class2`]}>{object["letter2"]}</div>);
+    renderArray.push(<div class={object[`class3`]}>{object["letter3"]}</div>);
+    renderArray.push(<div class={object[`class4`]}>{object["letter4"]}</div>);
+    renderArray.push(<div class={object[`class5`]}>{object["letter5"]}</div>);
+    renderArray.push(<div class={object[`class6`]}>{object["letter6"]}</div>);
+  
     return renderArray;
   },
 };
