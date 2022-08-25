@@ -350,7 +350,6 @@ export const WORDS = [
   "Server",
   "Settle",
   "Severe",
-  "Sexual",
   "Should",
   "Signal",
   "Signed",
