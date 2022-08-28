@@ -16,7 +16,6 @@ class Api::V1::SessionsController < ApplicationController
   
 
   def create
-
     @session = Session.new(params[:session])
     @session.user = current_user
     @session.game
