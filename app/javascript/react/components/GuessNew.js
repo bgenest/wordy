@@ -18,26 +18,35 @@ export const GuessNew = (props) => {
   }
   const handleSubmit = (event) => {
     event.preventDefault(event);
-    answer = helpers.checkGuess(currentguess, answer);
+
+    console.log(guessStatus)
     
-    if (helpers.checkLength(currentguess) && answer != false) {
+    if (guessStatus != "win" && count < 5) {
+      
+    answer = helpers.checkGuess(currentguess, answer);
+
+    if (helpers.checkLength(currentguess)) {
+
       setCount(count + 1);
       props.submitGuess(event, answer)
       let answerRenderable = helpers.convertToRender(answer);
       let newRenderArray = guessRender.concat(answerRenderable);
       setGuessRender(newRenderArray);
-      if (answer === true) {
+
+      if (currentguess.toLowerCase() == props.game.answer.toLowerCase()) {
         setGuessStatus("win");
 
       } else {
         setCurrentGuess("");
+
         if (count > 3) {
           setGuessStatus("lose");
         }
       }
-    } else {
-      alert("Guessses can only contain letters, and be six characters long!");
     }
+     else {
+      alert("Guessses can only contain letters, and be six characters long!");
+    }}
   };
 
   if (guessStatus == "win") {

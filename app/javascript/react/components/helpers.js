@@ -13,11 +13,7 @@ const helpers = {
     guess = guess.toLowerCase();
     answer = answer.toLowerCase();
     if (this.onlyLetters(guess)) {
-      if (guess != answer) {
         return this.newCompare(guess, answer);
-      } else {
-        return true;
-      }
     } else{
       return false
     }
