@@ -21,10 +21,14 @@ Ruby version 2.7.3
 * ```bundle exec rake db:seed```
 
 ## Heroku website
-TBD
+Production: https://thewordygame.herokuapp.com/
 
 # Features
-TBD
+-Homepage renders a random word + weather in Boston.
+-New Game page allows for gameplay (similar to wordle).
+-previous games page allows viewing of previous games (only works while signed in).
+
+<img width="1570" alt="Screen Shot 2022-08-28 at 12 38 37 PM" src="https://user-images.githubusercontent.com/38561548/187084872-80176a5a-60aa-47ce-b3ab-be77a3eebcff.png">
 
 # Authors
 * Bryan Genest
