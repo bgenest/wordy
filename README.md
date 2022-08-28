@@ -28,7 +28,7 @@ Production: https://thewordygame.herokuapp.com/
 -New Game page allows for gameplay (similar to wordle).
 -previous games page allows viewing of previous games (only works while signed in).
 
-<img width="1570" alt="Screen Shot 2022-08-28 at 12 38 37 PM" src="https://user-images.githubusercontent.com/38561548/187084872-80176a5a-60aa-47ce-b3ab-be77a3eebcff.png">
+<img width="1119" alt="Screen Shot 2022-08-28 at 12 39 04 PM" src="https://user-images.githubusercontent.com/38561548/187084903-254e29d4-9f72-43d6-951b-8e3ff2567a83.png">
 
 # Authors
 * Bryan Genest
