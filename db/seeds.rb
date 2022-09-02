@@ -1,3 +1,13 @@
+
+require "words.rb"
+
+
+$answer_array.each do |word|
+  Game.create(answer: word)
+end
+
+
+
 game1 = Game.create(answer:"Banana")
 user1 = User.create(email: "test@gmail.com",password: "111111")
 session1 = Session.create(user: user1, game: game1)
