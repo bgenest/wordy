@@ -1,72 +1,93 @@
 <!DOCTYPE html>
 <html>
+
   <head>
-    <title>Wordy</title>
-   
+    <title>
+    Wordy
+    </title>
     <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/29/29302.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <%= stylesheet_link_tag 'application', media: 'all' %>
     <%= csrf_meta_tags %>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
+
   <body>
+
     <nav class="top-bar nav">
       <div class="grid-x grid-padding-x">
         <div class="small-5 cell nav">
           <h1>
-            <a class="nav" href="/">Wordy</a>
+            <a class="nav" href="/">
+            Wordy
+            </a>
           </h1>
         </div>
-        
-          <h3 class="nav"> The word game about words</h3>
+          <h3 class="nav">
+            The word game about words
+          </h3>
       </div>
-      
       <section class="top-bar-section nav">
+
         <%- if current_user -%>
-        <p>Signed in as <%=current_user.email%></p>
-        <%- end -%>
+          <p> Signed in as
+            <%=current_user.email%></p>
+          <%- end -%>
+
         <ul class="vertical dropdown menu nav" data-dropdown-menu>
           <li class="nav">
-            <a class="button large nav" id="nav-bar-menu"><i class="fa-solid menu-icon"></i></a>
+            <a class="button large nav" id="nav-bar-menu">
+              <i class="fa-solid menu-icon"></i>
+            </a>
             <ul style="list-style-type:none">
+
               <%- if current_user -%>
-                  <%= link_to 'Sign out', destroy_user_session_path, method: :delete, class: "nav-menu" %>
+                <%= link_to 'Sign out', destroy_user_session_path, method: :delete, class: "nav-menu" %>
               <%- else -%>
-                  <%= link_to 'Sign up', new_user_registration_path, class: "nav-menu" %>
-                  <%= link_to 'Sign in', new_user_session_path, class: "nav-menu" %></li>
-                <%- end -%>
-                  <a class='nav-menu' href="/sessions">
-                    Previous Games</a>
-                  <a class='nav-menu' href="/sessions/new">
-                    New Game</a>
-                  <a class='nav-menu' href="/tutorial">
-                    How to Play</a>
-              </ul>
-            </li>
+                <%= link_to 'Sign up', new_user_registration_path, class: "nav-menu" %>
+                <%= link_to 'Sign in', new_user_session_path, class: "nav-menu" %>
+              <%- end -%>
+
+              <a class='nav-menu' href="/sessions">
+                Previous Games
+              </a>
+              <a class='nav-menu' href="/sessions/new">
+                New Game
+              </a>
+              <a class='nav-menu' href="/tutorial">
+                How to Play
+              </a>
+            </ul>
           </li>
-        </section>
-      </body>
-    </html>
-  </body>
-
-</html></nav><%- flash.each do |key, value| -%>
-<div class="flash flash-<%= key %>">
-  <%= value %>
-</div>
-<%- end -%>
-
-<%= yield %>
-
-<%= javascript_include_tag 'application' %>
-
-<%- if Rails.env.development? || Rails.env.test? -%>
-  <%= javascript_tag do %>
-    window.railsEnv = '<%= Rails.env %>'
-    <%- end -%>
-    <%- end -%>
-    <%= javascript_pack_tag 'application' %>
-    <%= yield :extra_footer %>
-
+        </ul>
+      </section>
+    </nav>
     
+    <%- flash.each do |key, value| -%>
+      <div class="flash flash-<%= key %>">
+        <%= value %>
+      </div>
+      <%- end -%>
+
+      <%= yield %>
+
+      <%= javascript_include_tag 'application' %>
+
+
+      <%- if Rails.env.development? || Rails.env.test? -%>
+        <%= javascript_tag do %>
+          window.railsEnv = '<%= Rails.env %>'
+          <%- end -%>
+          <%- end -%>
+          <%= javascript_pack_tag 'application' %>
+          <%= yield :extra_footer %>
+          
+    <footer> 
+      <h1>
+        footer
+      </h1>
+    </footer>
+  
   </body>
+
 </html>
