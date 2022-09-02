@@ -83,10 +83,12 @@ export const GuessNew = (props) => {
   });
   if (guessStatus == "win") {
     alert(`You won! The word was ${answer}`);
+    setGuessStatus(`The word was ${answer}`)
   }
 
   if (guessStatus == "lose") {
     alert(`No more guesses! The answer was ${answer}`);
+    setGuessStatus(`Oh no! The word was "${answer}". Refresh to try again.`)
   }
 
   const renderThese = guessRender.map((guess) => {
@@ -97,10 +99,10 @@ export const GuessNew = (props) => {
 
   return (
     <div className="grid-x cell">
-      <h3 class="">{guessStatus}</h3>
+      <h4 class="">{guessStatus}</h4>
       <div className="grid-x">{renderThese}</div>
       <br />
-        {wordComponents}
+        {/* {wordComponents} */}
       <div>
       </div>
 
