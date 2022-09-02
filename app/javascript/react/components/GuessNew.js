@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 
 import helpers from "./helpers";
 import GuessTell from "./GuessTell";
-import getWordInfo from "./getDefinition";
 import WordComponent from "./WordComponent";
 
 export const GuessNew = (props) => {
