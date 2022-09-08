@@ -6,7 +6,6 @@ class Api::V1::SessionsController < ApplicationController
 
   def index
     @sessions = Session.find(user: current_user)
-    binding.pry
 
   end
 
