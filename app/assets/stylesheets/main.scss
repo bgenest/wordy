@@ -1,6 +1,5 @@
 @import "variables.scss";
 
-
 body{
   background-color: $light_paper;
   color: black;
@@ -14,7 +13,6 @@ font-family: Arial, Helvetica, sans-serif;
 }
 
 .game_tile {
-
   height: 300px;
 }
 
@@ -25,7 +23,6 @@ font-family: Arial, Helvetica, sans-serif;
   min-width: 350px;
   max-height: 525px;
   min-height: 525px;
-
 }
 
 #guesses {
@@ -35,9 +32,7 @@ font-family: Arial, Helvetica, sans-serif;
 }
 
 #guesses-card {
-
   color: black;
-
 }
 
 #index-card-title{
@@ -79,25 +74,21 @@ font-family: Arial, Helvetica, sans-serif;
   text-align: center;
 }
 
-#Incorrect{
+#gray{
   background-color: #A9A9A9;
 }
 
-#correct-letter-spot{
+#green{
   background-color: #96D294 ;
 }
 
-#correct-letter{
+#yellow{
   background-color: #E0D268;
 }
 
-.answer-section{
-
-}
 
 .forms{
 max-width: 300px;
-
 }
 
 .button-forms{

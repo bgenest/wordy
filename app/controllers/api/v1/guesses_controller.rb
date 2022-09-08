@@ -21,21 +21,19 @@ class Api::V1::GuessesController < ApplicationController
     end
     if guess.save
       render json: guess
-        else
-            render json: {error: guess.errors.full_messages}, status: :unprocessable_entity            
-        end
+    else
+      render json: {error: guess.errors.full_messages}, status: :unprocessable_entity            
+    end
   end
 
   def new
     guess = Guess.new
   end
 
-
   private
 
     def guess_params
-        params.require(:guess).permit('letter1', 'letter2', 'letter3', 'letter4', 'letter5', 'letter6', 
-                                      'class1', 'class2', 'class3', 'class4', 'class5', 'class6')
+        params.require(:guess).permit("word")
     end
   
 end

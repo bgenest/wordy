@@ -21,12 +21,17 @@
 
         <div style="list-style-type:none" class="grid-x" id="guesses">
           <%session.guesses.each do |guess|%>
-          <p class="cell guess-display" id="<%=guess.class1%>"><%=guess.letter1%></p>
-          <p class="cell guess-display" id="<%=guess.class2%>"><%=guess.letter2%></p>
-          <p class="cell guess-display" id="<%=guess.class3%>"><%=guess.letter3%></p>
-          <p class="cell guess-display" id="<%=guess.class4%>"><%=guess.letter4%></p>
-          <p class="cell guess-display" id="<%=guess.class5%>"><%=guess.letter5%></p>
-          <p class="cell guess-display" id="<%=guess.class6%>"><%=guess.letter6%></p>
+          
+            <%current_guess = GuessToRender.new(guess.word,session.game.answer)%>
+            <%current_guess = current_guess.format_word%>
+
+            <%current_guess.each do |character|%>
+              <%color = character[1][:color]%>
+              <%letter = character[1][:letter]%>
+
+              <p class="cell guess-display" id="<%=color%>"><%=letter%></p>
+      
+            <%end%>
           <%end%>
         </div>
       </ul>
