@@ -1,4 +1,4 @@
-
+require "pry"
 class GuessToRender
 
   def initialize(word, answer)
@@ -11,29 +11,43 @@ class GuessToRender
   end
 
   def format_letter(letter, letter_color)
+    
       return {"letter": letter, "color": letter_color}
   end
 
   def format_word
     rendered_guess = {}
+    
     index = 0
     @word.each_char do |letter|
-      if @answer.include? letter
-        if @word.index(letter) == @answer.index(letter)  
-          rendered_guess[index] = format_letter(letter,"green")
-        else 
-          rendered_guess[index] = format_letter(letter,"yellow")
-        end
+      color = ""
+    
+      if @word[index] == @answer[index]  
+        color = "green"
+        @answer[letter] = "_"
       else
-        rendered_guess[index] = format_letter(letter,"gray")
+        color = "gray"
       end
+
+      rendered_guess[index] = format_letter(letter,color)
       index += 1
     end
+
+    index = 0
+    @word.each_char do |letter|
+      color=""
+      if @answer.include?(letter) && letter != @answer[index]  
+        color = "yellow"
+         @answer[letter] = "_"
+         rendered_guess[index] = format_letter(letter,color)
+      end
+
+      
+      index += 1
+  end
     return rendered_guess
   end
 
-  def check_for_redundency(guess_nested_object)
-    #if letter is already accounted for (yellow/green)
-  end
 
 end 
+
