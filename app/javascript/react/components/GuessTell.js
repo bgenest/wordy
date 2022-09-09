@@ -1,7 +1,6 @@
 import React from "react";
 
 export const GuessTell = (props) => {
-
   return (
     <div>
       <br/>

@@ -22,11 +22,11 @@ ActiveRecord::Schema.define(version: 2022_08_18_144808) do
   end
 
   create_table "guesses", force: :cascade do |t|
+    t.string "word", null: false
     t.bigint "user_id", null: false
     t.bigint "session_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "word"
     t.index ["session_id"], name: "index_guesses_on_session_id"
     t.index ["user_id"], name: "index_guesses_on_user_id"
   end

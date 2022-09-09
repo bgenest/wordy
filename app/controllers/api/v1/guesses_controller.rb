@@ -13,6 +13,7 @@ class Api::V1::GuessesController < ApplicationController
     guess = Guess.new(guess_params)
     guess.user = current_user
     game = params["game"]
+    
     existing_session = Session.find_by("user": guess.user, "game_id": game["id"])
     if existing_session
       guess.session = existing_session

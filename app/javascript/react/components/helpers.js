@@ -18,27 +18,42 @@ const helpers = {
       return false
     }
   },
-  newCompare(guess, answer) {
-    let resultObject = {};
-    for (let i = 0; i < 6; i++) {
-      let letterStatus = "";
 
-      let letterPosition = answer.indexOf(guess[i]);
-      if (letterPosition === -1) {
-        letterStatus = "Incorrect";
-      } else {
+  newCompare(guess, answer) {
+
+    let resultObject = {};
+
+    for (let i = 0; i < 6; i++) {
+      let letterStatus;
         if (guess[i] === answer[i]) {
           letterStatus = "correct-letter-spot";
-        } else {
-          letterStatus = "correct-letter";
-        }
+          answer = answer.replace(guess[i],"_")
+        } 
+       else {
+        letterStatus = "Incorrect";
       }
-      let letterKey = `letter${i+1}`
-      let letterID  = `class${i+1}`
-      resultObject[letterKey] = guess[i] 
-      resultObject[letterID] =  letterStatus ;
+        let letterKey = `letter${i+1}`
+        let letterID  = `class${i+1}`
+        resultObject[letterKey] = guess[i] 
+        resultObject[letterID] =  letterStatus
     }
+
+    for (let i = 0; i < 6; i++) {
+      let letterStatus;
+      let currentLetter = guess[i]
+      if (answer.includes(currentLetter) && currentLetter !== answer[i]) {
+       
+        answer = answer.replace(guess[i],"_")
+        letterStatus = "correct-letter";
+        let letterKey = `letter${i+1}`
+        let letterID  = `class${i+1}`
+        resultObject[letterKey] = guess[i] 
+        resultObject[letterID] =  letterStatus ;
+      } 
+    }
+
     return resultObject;
+
   },
   checkLength(guess) {
     if (guess.length == 6) {
@@ -53,13 +68,10 @@ const helpers = {
   convertToRender(object) {
     let renderArray = [];
    
-    renderArray.push(<div class={object[`class1`]}>{object["letter1"]}</div>);
-    renderArray.push(<div class={object[`class2`]}>{object["letter2"]}</div>);
-    renderArray.push(<div class={object[`class3`]}>{object["letter3"]}</div>);
-    renderArray.push(<div class={object[`class4`]}>{object["letter4"]}</div>);
-    renderArray.push(<div class={object[`class5`]}>{object["letter5"]}</div>);
-    renderArray.push(<div class={object[`class6`]}>{object["letter6"]}</div>);
-  
+    for (let i = 0; i < 6; i++){
+      renderArray.push(<div className={object[`class${i+1}`]}>{object[`letter${i+1}`]}</div>)
+    }
+    ;
     return renderArray;
   },
 };
