@@ -53,12 +53,12 @@ const helpers = {
   convertToRender(object) {
     let renderArray = [];
    
-    renderArray.push(<div class={object[`class1`]}>{object["letter1"]}</div>);
-    renderArray.push(<div class={object[`class2`]}>{object["letter2"]}</div>);
-    renderArray.push(<div class={object[`class3`]}>{object["letter3"]}</div>);
-    renderArray.push(<div class={object[`class4`]}>{object["letter4"]}</div>);
-    renderArray.push(<div class={object[`class5`]}>{object["letter5"]}</div>);
-    renderArray.push(<div class={object[`class6`]}>{object["letter6"]}</div>);
+    renderArray.push(<div className={object[`class1`]}>{object["letter1"]}</div>);
+    renderArray.push(<div className={object[`class2`]}>{object["letter2"]}</div>);
+    renderArray.push(<div className={object[`class3`]}>{object["letter3"]}</div>);
+    renderArray.push(<div className={object[`class4`]}>{object["letter4"]}</div>);
+    renderArray.push(<div className={object[`class5`]}>{object["letter5"]}</div>);
+    renderArray.push(<div className={object[`class6`]}>{object["letter6"]}</div>);
   
     return renderArray;
   },

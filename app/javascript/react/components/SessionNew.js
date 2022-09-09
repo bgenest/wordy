@@ -52,6 +52,8 @@ export const SessionNew = (props) => {
   
   const submitGuess = async (event, formPayload) => {
     event.preventDefault();
+    debugger
+    formPayload = {'word': formPayload }
     formPayload["game"] = game
     try {
       const response = await fetch(`/api/v1/guesses/`, {
