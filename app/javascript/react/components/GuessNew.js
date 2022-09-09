@@ -2,19 +2,17 @@ import React, { useState, useEffect } from "react";
 
 import helpers from "./helpers";
 import GuessTell from "./GuessTell";
-import WordComponent from "./WordComponent";
+
 
 export const GuessNew = (props) => {
   const [currentguess, setCurrentGuess] = useState([]);
   const [guessStatus, setGuessStatus] = useState([]);
   const [guessRender, setGuessRender] = useState([]);
   const [count, setCount] = useState(0);
-  const [wordData, setWordData] = useState([]);
 
   const handleChange = (event) => {
     setCurrentGuess(event.currentTarget.value);
   };
-
 
   let answer;
   if (props.game.answer != undefined) {
@@ -48,8 +46,6 @@ export const GuessNew = (props) => {
     }
   };
 
-
-
   if (guessStatus == "win") {
     alert(`You won! The word was ${answer}`);
     setGuessStatus(`The word was ${answer}`)
@@ -63,7 +59,7 @@ export const GuessNew = (props) => {
   const renderThese = guessRender.map((guess) => {
 
     return (
-      <GuessTell content={guess.props.children} class={guess.props.class} />
+      <GuessTell content={guess.props.children} class={guess.props.className} />
     );
   });
 
