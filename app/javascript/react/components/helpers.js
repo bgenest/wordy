@@ -9,6 +9,16 @@ const helpers = {
 
     return WORDS[random_index];
   },
+  isInWordList(guess) {
+    guess = guess.toLowerCase()
+
+    if (WORDS.includes(guess)){
+      return true
+    }
+    else{
+      false
+    }
+  },
   checkGuess(guess, answer) {
     guess = guess.toLowerCase();
     answer = answer.toLowerCase();
