@@ -23,8 +23,8 @@ export const GuessNew = (props) => {
 
     if (guessStatus != "win" && count < 5) {
       answer = helpers.checkGuess(currentguess, answer);
-
-      if (helpers.checkLength(currentguess) && answer) {
+      
+      if (helpers.checkLength(currentguess) && answer && helpers.isInWordList(currentguess)) {
         setCount(count + 1);
         props.submitGuess(event, currentguess);
         let answerRenderable = helpers.convertToRender(answer);
@@ -41,7 +41,8 @@ export const GuessNew = (props) => {
           }
         }
       } else {
-        alert("Guessses can only contain letters, and be six characters long!");
+        alert("Guesses can only be: letters, six characters long, and in the list of possible words!");
+        
       }
     }
   };
