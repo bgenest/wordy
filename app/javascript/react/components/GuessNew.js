@@ -15,6 +15,7 @@ export const GuessNew = (props) => {
     setCurrentGuess(event.currentTarget.value);
   };
 
+
   let answer;
   if (props.game.answer != undefined) {
     answer = props.game.answer;
@@ -25,7 +26,7 @@ export const GuessNew = (props) => {
     if (guessStatus != "win" && count < 5) {
       answer = helpers.checkGuess(currentguess, answer);
 
-      if (helpers.checkLength(currentguess)) {
+      if (helpers.checkLength(currentguess) && answer) {
         setCount(count + 1);
         props.submitGuess(event, currentguess);
         let answerRenderable = helpers.convertToRender(answer);
@@ -47,6 +48,8 @@ export const GuessNew = (props) => {
     }
   };
 
+
+
   if (guessStatus == "win") {
     alert(`You won! The word was ${answer}`);
     setGuessStatus(`The word was ${answer}`)
@@ -58,8 +61,9 @@ export const GuessNew = (props) => {
   }
 
   const renderThese = guessRender.map((guess) => {
+
     return (
-      <GuessTell content={guess.props.children} class={guess.props.className} />
+      <GuessTell content={guess.props.children} class={guess.props.class} />
     );
   });
 

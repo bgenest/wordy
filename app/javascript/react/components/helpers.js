@@ -10,6 +10,7 @@ const helpers = {
     return WORDS[random_index];
   },
   checkGuess(guess, answer) {
+    debugger
     guess = guess.toLowerCase();
     answer = answer.toLowerCase();
     if (this.onlyLetters(guess)) {
