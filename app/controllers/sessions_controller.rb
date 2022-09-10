@@ -1,4 +1,4 @@
-require "/Users/bryangenest/wordy/app/services/app_services/guesses_to_render.rb"
+require_relative "../services/app_services/guesses_to_render.rb"
 
 class SessionsController < ApplicationController
 
