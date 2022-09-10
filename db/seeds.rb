@@ -1,5 +1,5 @@
 
-require_relative "/Users/bryangenest/wordy/lib/words.rb"
+require_relative "../lib/words.rb"
 #answer_array is defined in lib/words.rb
 
 $answer_array.each do |word|
