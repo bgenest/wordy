@@ -70,7 +70,7 @@ export const wordIndex = (props) => {
         <div className="play-button-container float-center">
           <br />
           <a
-            className=" button-19"
+            className="button-19"
             role="button"
             href="/tutorial"
             id="play-button"

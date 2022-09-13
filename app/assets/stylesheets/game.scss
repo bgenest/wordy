@@ -6,7 +6,6 @@
 
   #form-title {
     text-align: center;
-
   }
 
   #guess-form {
@@ -19,14 +18,15 @@
   text-transform: uppercase;
   font-size: x-large;
   text-align: center;
-  border-radius: 1ch;
+  font-weight: bold;
+  border-style: solid;
   border-color: black;
-
+  border-width: 3px;
+  border-radius: 3px;
 }
 
 .guesses-container{
   padding-left: 30%;
-
 }
 
 .card-new-game{
@@ -36,5 +36,8 @@
 
 .guess-form{
 padding-top: 10%;
+}
 
+.guess-letter-tile{
+  padding-inline: 2.5px;
 }
