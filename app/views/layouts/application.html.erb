@@ -27,14 +27,16 @@
           The word game about words
         </h3>
       </div>
-      <section class="top-bar-section nav">
 
+      <div class="user-tile">
         <%- if current_user -%>
           <p>
-            Hello,
-            <%=current_user.email%>
-            !</p>
+            +Hello,
+            <%=current_user.email%>!+</p>
           <%- end -%>
+      </div>
+        <section class="top-bar-section nav">
+
 
           <ul class="vertical dropdown menu nav" data-dropdown-menu>
             <li class="nav">

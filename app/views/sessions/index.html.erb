@@ -2,7 +2,7 @@
 <head>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></head>
   <div>
-    <h1 class="title">Previous Games<i class="fa-solid fa-dice"></i>
+    <h1 class="index_title">Previous Games<i class="fa-solid fa-dice"></i>
     </h1>
     <hr/>
   </div>
@@ -28,9 +28,9 @@
             <%current_guess.each do |character|%>
               <%color = character[1][:color]%>
               <%letter = character[1][:letter]%>
-
-              <p class="cell guess-display" id="<%=color%>"><%=letter%></p>
-      
+              <div class="guess-letter-tile">
+              <p class="guess-display" id="<%=color%>"><%=letter%></p>
+              </div>
             <%end%>
           <%end%>
         </div>

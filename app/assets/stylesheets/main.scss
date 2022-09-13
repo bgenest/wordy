@@ -16,13 +16,17 @@ font-family: Arial, Helvetica, sans-serif;
   height: 300px;
 }
 
+.index_title{
+  text-align: center;
+}
+
 .index {
   color: black;
   background-color: white;
-  max-width: 350px;
-  min-width: 350px;
-  max-height: 525px;
-  min-height: 525px;
+  max-width: 375px;
+  min-width: 375px;
+  max-height: 575px;
+  min-height: 575px;
 }
 
 #guesses {
@@ -88,6 +92,7 @@ font-family: Arial, Helvetica, sans-serif;
 
 #Incorrect{
   background-color: #A9A9A9;
+  
 }
 
 #correct-letter-spot{
@@ -97,7 +102,6 @@ font-family: Arial, Helvetica, sans-serif;
 #correct-letter{
   background-color: #E0D268;
 }
-
 
 .forms{
 max-width: 300px;

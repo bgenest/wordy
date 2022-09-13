@@ -5,16 +5,49 @@
   <ul class="tutorial-list">
     <p>The name of the game is guessing the secret word, and you only get 5 guesses.
     </p>
+    <p>For instance, if the secret word was "Haggle", and you guesssed "Honest"
+    </p>
     <p>Each time you guess, the letters will be highlighted one of 3 colors:
     </p>
-    <li>
-      <br/>
-      <div class="grid-x">
-        <p class=" cell tutorial tutorial-highlighting float-center" id="correct-letter">yellow</p>
-        <p class=" cell tutorial tutorial-highlighting float-center" id="correct-letter-spot">green</p>
-        <p class="cell tutorial tutorial-highlighting float-center" id="Incorrect">gray</p>
+    <div>
+      <div class="grid-x tutorial-content">
+        <div class="guess-letter-tile"><br>
+          <div class="cell guess-display" id="correct-letter-spot">
+            h
+          </div>
+        </div>
+        <div class="guess-letter-tile">
+          <br>
+          <div class="cell guess-display" id="Incorrect">
+            o
+          </div>
+        </div>
+        <div class="guess-letter-tile">
+          <br>
+          <div class="cell guess-display" id="Incorrect">
+            n
+          </div>
+        </div>
+        <div class="guess-letter-tile">
+          <br>
+          <div class="cell guess-display" id="correct-letter">
+            e
+          </div>
+        </div>
+        <div class="guess-letter-tile">
+          <br>
+          <div class="cell guess-display" id="Incorrect">
+            s
+          </div>
+        </div>
+        <div class="guess-letter-tile">
+          <br>
+          <div class="cell guess-display" id="Incorrect">
+            t
+          </div>
+        </div>
       </div>
-    </li>
+    </div>
     <br/>
     <p>If the letter is highlighted yellow, it's in the word, but it's in the incorrect spot.
     </p>
