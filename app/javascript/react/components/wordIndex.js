@@ -57,10 +57,9 @@ export const wordIndex = (props) => {
         <div className="play-button-container float-center">
           <br />
           <a
-            className=" button-19"
+            className="aux-button button-19"
             role="button"
             href="sessions/new"
-            id="play-button"
           >
             Play!
           </a>
@@ -70,10 +69,9 @@ export const wordIndex = (props) => {
         <div className="play-button-container float-center">
           <br />
           <a
-            className="button-19"
+            className="aux-button button-19"
             role="button"
             href="/tutorial"
-            id="play-button"
           >
             How to play
           </a>
