@@ -5,7 +5,7 @@
 Kinda like Wordle but not really.
 This app is a full-site clone of the popular game Wordle.
 
-App created with a React front end, and a Ruby on Rails backend.
+App created with a React frontend, and a Ruby on Rails backend.
 
 Ruby version 2.7.3
 
