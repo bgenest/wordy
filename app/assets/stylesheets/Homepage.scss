@@ -89,9 +89,8 @@
   user-select: auto;
 }
 
-.button-19:hover:not(:disabled) {
-  filter: brightness(1.1);
-  -webkit-filter: brightness(1.1);
+.button-19:hover {
+  background-color:gray ;
 }
 
 .button-19:disabled {
