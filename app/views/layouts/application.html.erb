@@ -3,7 +3,7 @@
 
   <head>
     <title>
-    Wordy
+      Wordy
     </title>
     <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/29/29302.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -18,70 +18,71 @@
       <div class="grid-x grid-padding-x">
         <div class="small-5 cell nav">
           <h1>
-            <a class="nav" href="/">
-            Wordy
+            <a class="nav title" href="/">
+              Wordy
             </a>
           </h1>
         </div>
-          <h3 class="nav">
-            The word game about words
-          </h3>
+        <h3 class="nav">
+          The word game about words
+        </h3>
       </div>
       <section class="top-bar-section nav">
 
         <%- if current_user -%>
-          <p> Signed in as
-            <%=current_user.email%></p>
+          <p>
+            Hello,
+            <%=current_user.email%>
+            !</p>
           <%- end -%>
 
-        <ul class="vertical dropdown menu nav" data-dropdown-menu>
-          <li class="nav">
-            <a class="button large nav" id="nav-bar-menu">
-              <i class="fa-solid menu-icon"></i>
-            </a>
-            <ul style="list-style-type:none">
-
-              <%- if current_user -%>
-                <%= link_to 'Sign out', destroy_user_session_path, method: :delete, class: "nav-menu" %>
-              <%- else -%>
-                <%= link_to 'Sign up', new_user_registration_path, class: "nav-menu" %>
-                <%= link_to 'Sign in', new_user_session_path, class: "nav-menu" %>
-              <%- end -%>
-
-              <a class='nav-menu' href="/sessions">
-                Previous Games
+          <ul class="vertical dropdown menu nav" data-dropdown-menu>
+            <li class="nav">
+              <a class="button large nav" id="nav-bar-menu">
+                <i class="fa-solid menu-icon"></i>
               </a>
-              <a class='nav-menu' href="/sessions/new">
-                New Game
-              </a>
-              <a class='nav-menu' href="/tutorial">
-                How to Play
-              </a>
-            </ul>
-          </li>
-        </ul>
-      </section>
-    </nav>
-    
-    <%- flash.each do |key, value| -%>
-      <div class="flash flash-<%= key %>">
-        <%= value %>
-      </div>
-      <%- end -%>
+              <ul style="list-style-type:none">
 
-      <%= yield %>
+                <%- if current_user -%>
+                  <%= link_to 'Sign out', destroy_user_session_path, method: :delete, class: "nav-menu" %>
+                <%- else -%>
+                  <%= link_to 'Sign up', new_user_registration_path, class: "nav-menu" %>
+                  <%= link_to 'Sign in', new_user_session_path, class: "nav-menu" %>
+                  <%- end -%>
 
-      <%= javascript_include_tag 'application' %>
+                  <a class='nav-menu' href="/sessions">
+                    Previous Games
+                  </a>
+                  <a class='nav-menu' href="/sessions/new">
+                    New Game
+                  </a>
+                  <a class='nav-menu' href="/tutorial">
+                    How to Play
+                  </a>
+                </ul>
+              </li>
+            </li>
+          </ul>
+        </section>
+      </nav>
 
+      <%- flash.each do |key, value| -%>
+        <div class="flash flash-<%= key %>">
+          <%= value %>
+        </div>
+        <%- end -%>
 
-      <%- if Rails.env.development? || Rails.env.test? -%>
-        <%= javascript_tag do %>
-          window.railsEnv = '<%= Rails.env %>'
-          <%- end -%>
-          <%- end -%>
-          <%= javascript_pack_tag 'application' %>
-          <%= yield :extra_footer %>
-  
-  </body>
+        <%= yield %>
 
-</html>
+        <%= javascript_include_tag 'application' %>
+
+        <%- if Rails.env.development? || Rails.env.test? -%>
+          <%= javascript_tag do %>
+            window.railsEnv = '<%= Rails.env %>'
+            <%- end -%>
+            <%- end -%>
+            <%= javascript_pack_tag 'application' %>
+            <%= yield :extra_footer %>
+          </body>
+
+        </html>
