@@ -1,7 +1,7 @@
 @import "variables.scss";
 
 body{
-  background-color: $light_paper;
+  background-color: ivory;
   color: black;
 font-family: Arial, Helvetica, sans-serif;
 }
@@ -56,7 +56,7 @@ font-family: Arial, Helvetica, sans-serif;
   background-color: white;
   border-radius: 2ch;
   border-color: black;
-  border-width: 4px;
+  border-width: 3px;
   text-align: center;
   padding-top: 6ch;
 
@@ -118,4 +118,12 @@ max-width: 300px;
 
 .form-card{
   max-width:fit-content;
+}
+
+.options{
+  list-style: none;
+}
+
+.form-button{
+  padding-top: 5px;
 }
