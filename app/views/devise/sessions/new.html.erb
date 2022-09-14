@@ -1,9 +1,9 @@
 <br/>
-<div class="card float-center form-card">
-  <div class="cell float-center">
-    <h2 class="float-center">Log in</h2>
-  </div>
-  <hr/>
+<div class="card float-center form-card index ">
+    <div class="cell float-center">
+      <h2 class="float-center">Log in</h2>
+    </div>
+    <hr/>
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
       <div class="grid-x float-center">
         <div class="">
@@ -18,8 +18,8 @@
       </div>
 
       <div class="grid-x float-center">
-        <div class="">
-          <label class="">
+        <div>
+          <label>
             Password:
           </label>
         </div>
@@ -29,30 +29,21 @@
         </div>
       </div>
 
-      <div>
-        <% if devise_mapping.rememberable? %>
-          <div class="checkbox">
-            <%= f.check_box :remember_me %>
-            <%= f.label :remember_me %>
-          </div>
-        <% end %>
-      </div>
+      <br/>
 
       <div class="grid-x">
         <div class="cell">
           <%= f.submit "Log in", class:"button-19 forms" %>
         </div>
+      </div>
+      <br/>
 
-        <div class="grid-x float-center">
-          <div class="cell"></div>
-          <ul class="aux-button button-19 button-forms float-center">
-            <li class="button-19">
-            <%= render "devise/shared/links", :class => "button-forms" %>
-            </li>
-          </ul>
+      <div class="grid-x">
+        <div class="cell">
+          <%= render "devise/shared/links" %>
         </div>
-
+      </div>
 
       <% end %>
 
-    </div>
+  </div>
