@@ -22,7 +22,6 @@ font-family: Arial, Helvetica, sans-serif;
 
 .index {
   color: black;
-  background-color: white;
   max-width: 375px;
   min-width: 375px;
   max-height: 575px;
@@ -113,11 +112,12 @@ max-width: 300px;
   color: white;
   border-radius: 5ch;
   margin-top: 5%;
-  margin-bottom: 10%;
+  margin-bottom: 15%;
 }
 
 .form-card{
-  max-width:fit-content;
+  max-width:350px;
+  padding-left: 50px;
 }
 
 .options{

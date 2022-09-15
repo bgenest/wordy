@@ -12,12 +12,11 @@
     <%if @sessions.length > 0 %>
       <% @sessions.each do |session|%>
 
-      <div class="card game_tile float-center index">
+      <div class="game_tile float-center index">
         <h3 id="index-card-title">
         Game:
         <%=session.game.id%></h3>
       <ul class='grid-x cell float-center' id="guesses-card">
-        <p class="card-divder" id="guesses-title">Guesses:</p>
 
         <div style="list-style-type:none" class="grid-x" id="guesses">
           <%session.guesses.each do |guess|%>

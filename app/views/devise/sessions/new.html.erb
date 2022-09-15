@@ -1,29 +1,31 @@
 <br/>
-<div class="card float-center form-card index ">
-    <div class="cell float-center">
-      <h2 class="float-center">Log in</h2>
+<div class="tile grid-container form-card">
+    <div class="cell">
+      <h2 class="">
+      Log in
+      </h2>
     </div>
     <hr/>
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-      <div class="grid-x float-center">
+      <div class="field forms">
         <div class="">
           <label class="">
             Email:
           </label>
         </div>
-        <div class="grid-x forms float-center">
+        <div class="field forms">
           <% f.label :email %>
           <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
         </div>
       </div>
 
-      <div class="grid-x float-center">
+      <div class="field forms">
         <div>
           <label>
             Password:
           </label>
         </div>
-        <div class="grid-x forms float-center">
+        <div class="field forms">
           <% f.label :password %>
           <%= f.password_field :password, autocomplete: "current-password" %>
         </div>
@@ -31,14 +33,14 @@
 
       <br/>
 
-      <div class="grid-x">
+      <div class="field forms">
         <div class="cell">
           <%= f.submit "Log in", class:"button-19 forms" %>
         </div>
       </div>
       <br/>
 
-      <div class="grid-x">
+      <div class="field forms">
         <div class="cell">
           <%= render "devise/shared/links" %>
         </div>
