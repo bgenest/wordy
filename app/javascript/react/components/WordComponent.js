@@ -5,7 +5,7 @@ import { faLightbulb } from "@fortawesome/free-solid-svg-icons";
 export const WordComponent = (props) => {
 
   return (
-    <div class="grid-container">
+    <div class="grid-container tile-container">
       <div class="grid-x grid-padding-x grid-padding-y word-tile">
         <div class="cell card">
           <div class="card-section">

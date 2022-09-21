@@ -42,14 +42,13 @@ export const GuessNew = (props) => {
         }
       } else {
         alert("Guesses can only be: letters, six characters long, and in the list of possible words!");
-        
       }
     }
   };
 
   if (guessStatus == "win") {
     alert(`You won! The word was ${answer}`);
-    setGuessStatus(`The word was ${answer}`)
+    setGuessStatus(`You won! The word was ${answer}`)
   }
 
   if (guessStatus == "lose") {
@@ -66,12 +65,17 @@ export const GuessNew = (props) => {
 
   return (
     <div className="grid-x cell">
-      <h4 className="">{guessStatus}</h4>
-      <div className="grid-x">{renderThese}</div>
-      <br />
-      <div>
+      <h3 className="float-center">
+        Guess the word! 
+        <hr/>
+      </h3>
+      <h4 className="game-result">
+        {guessStatus}
+      </h4>
+      <div className="grid-x">
+        {renderThese}
       </div>
-
+      <br />
       <form onSubmit={handleSubmit} className="float-center guess-form">
         <input
           maxLength={6}

@@ -2,6 +2,7 @@
   font-size: larger;
   list-style-type: none ;
   padding: 2%;
+  padding-left: 15%;
   border-radius: 5ch;
 }
 
@@ -12,11 +13,15 @@
 }
 
 .tutorial-content{
-  padding-left: 15%;
+    padding-left: 15%;
 }
 
 .tutorial-button{
   width: fit-content;
-  padding: 2%;
+  padding-left: 40%;
   font-size: larger;
+}
+
+.tutorial-title{
+  padding-left: 30%;
 }
