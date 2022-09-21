@@ -1,7 +1,7 @@
 @import "variables.scss";
 
 body{
-  background-color: ivory;
+  background-color: slategray;
   color: black;
 font-family: Arial, Helvetica, sans-serif;
 }
@@ -52,7 +52,7 @@ font-family: Arial, Helvetica, sans-serif;
 }
 
 .card {
-  background-color: white;
+  background-color: ivory;
   border-radius: 2ch;
   border-color: black;
   border-width: 3px;
@@ -91,7 +91,6 @@ font-family: Arial, Helvetica, sans-serif;
 
 #Incorrect{
   background-color: #A9A9A9;
-  
 }
 
 #correct-letter-spot{

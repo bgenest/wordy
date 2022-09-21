@@ -77,12 +77,9 @@ export const SessionNew = (props) => {
   return (
     <div className="game-card-container float-center">
       <br />
-      <h1 className="title">Wordy </h1>
-      <h5 className="subtitle">
-        {" "}
-        Guesses can only be 6 characters long. Good Luck!
-      </h5>
-      <hr />
+      <br />
+      <br />
+      <br />
       <div className="">
         <div className="new-game-card">
           <div className="">

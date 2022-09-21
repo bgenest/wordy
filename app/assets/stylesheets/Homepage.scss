@@ -1,6 +1,5 @@
 @import "variables.scss";
 
-
 .word-tile {
   background-color: $black;
   border-radius: 2ch;
@@ -97,5 +96,7 @@
   cursor: auto;
 }
 
-
+.tile-container{
+  padding-top: 10px;
+}
 
