@@ -75,7 +75,7 @@ export const GuessNew = (props) => {
       <div className="grid-x">
         {renderThese}
       </div>
-      <br />
+
       <form onSubmit={handleSubmit} className="float-center guess-form">
         <input
           maxLength={6}

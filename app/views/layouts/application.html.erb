@@ -7,83 +7,34 @@
     </title>
     <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/29/29302.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <%= stylesheet_link_tag 'application', media: 'all' %>
-    <%= csrf_meta_tags %>
+      <%= stylesheet_link_tag 'application', media: 'all' %>
+      <%= csrf_meta_tags %>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
 
   <body>
+    <%= render 'layouts/header' %>
 
-    <nav class="top-bar nav">
-      <div class="grid-x grid-padding-x">
-        <div class="small-5 cell nav">
-          <h1>
-            <a class="nav title" href="/">
-              Wordy
-            </a>
-          </h1>
-        </div>
-        <h3 class="nav">
-          The word game about words
-        </h3>
+    <%- flash.each do |key, value| -%>
+      <div class="flash flash-<%= key %>">
+        <%= value %>
       </div>
+    <%- end -%>
 
-      <div class="user-tile">
-        <%- if current_user -%>
-          <p>
-            +Hello,
-            <%=current_user.email%>!+</p>
-          <%- end -%>
-      </div>
-        <section class="top-bar-section nav">
+    <%= yield %>
 
-          <ul class="vertical dropdown menu nav" data-dropdown-menu>
-            <li class="nav">
-              <a class="button large nav" id="nav-bar-menu">
-                <i class="fa-solid menu-icon"></i>
-              </a>
-              <ul style="list-style-type:none">
+    <%= javascript_include_tag 'application' %>
 
-                <%- if current_user -%>
-                  <%= link_to 'Sign out', destroy_user_session_path, method: :delete, class: "nav-menu" %>
-                <%- else -%>
-                  <%= link_to 'Sign up', new_user_registration_path, class: "nav-menu" %>
-                  <%= link_to 'Sign in', new_user_session_path, class: "nav-menu" %>
-                  <%- end -%>
-
-                  <a class='nav-menu' href="/sessions">
-                    Previous Games
-                  </a>
-                  <a class='nav-menu' href="/sessions/new">
-                    New Game
-                  </a>
-                  <a class='nav-menu' href="/tutorial">
-                    How to Play
-                  </a>
-                </ul>
-              </li>
-            </li>
-          </ul>
-        </section>
-      </nav>
-
-      <%- flash.each do |key, value| -%>
-        <div class="flash flash-<%= key %>">
-          <%= value %>
-        </div>
+    <%- if Rails.env.development? || Rails.env.test? -%>
+      <%= javascript_tag do %>
+        window.railsEnv = '<%= Rails.env %>'
         <%- end -%>
+        <%- end -%>
+        <%= javascript_pack_tag 'application' %>
+        <%= yield :extra_footer %>
+    </div>
 
-        <%= yield %>
+    <%= render 'layouts/footer' %>
+  </body>
 
-        <%= javascript_include_tag 'application' %>
-
-        <%- if Rails.env.development? || Rails.env.test? -%>
-          <%= javascript_tag do %>
-            window.railsEnv = '<%= Rails.env %>'
-            <%- end -%>
-            <%- end -%>
-            <%= javascript_pack_tag 'application' %>
-            <%= yield :extra_footer %>
-          </body>
-
-        </html>
+</html>

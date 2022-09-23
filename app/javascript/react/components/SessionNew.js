@@ -78,8 +78,7 @@ export const SessionNew = (props) => {
     <div className="game-card-container float-center">
       <br />
       <br />
-      <br />
-      <br />
+
       <div className="">
         <div className="new-game-card">
           <div className="">
