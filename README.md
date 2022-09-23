@@ -7,6 +7,8 @@ This app is a full-site clone of the popular game Wordle.
 
 App created with a React frontend, and a Ruby on Rails backend.
 
+Developed in Chrome Desktop, Mobile support is to come.
+
 Ruby version 2.7.3
 
 ## Installation
