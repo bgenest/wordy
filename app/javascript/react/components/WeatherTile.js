@@ -34,10 +34,10 @@ export const WeatherTile = (props) => {
   };
 
   return (
-    <div class="grid-container tile-container">
-      <div class="grid-x grid-padding-x grid-padding-y word-tile">
-        <div class="cell card">
-          <div class="card-section">
+    <div className="grid-container tile-container">
+      <div className="grid-x grid-padding-x grid-padding-y word-tile">
+        <div className="cell card">
+          <div className="card-section">
             <WeatherData forecast={forecast} />
           </div>
         </div>

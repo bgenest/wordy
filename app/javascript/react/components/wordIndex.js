@@ -5,7 +5,25 @@ import WeatherTile from "./WeatherTile";
 import helpers from "./helpers";
 
 export const wordIndex = (props) => {
-  const [wordData, setWordData] = useState([]);
+  const [wordData, setWordData] = useState([
+    {
+      word: "word",
+      phonetic: "/wɜd/",
+      meanings: [
+        {
+          definitions: [
+            {
+              definition:
+                "The smallest unit of language that has a particular meaning and can be expressed by itself; the smallest discrete, meaningful unit of language. (contrast morpheme.)",
+            },
+            {
+              definition: "Something like such a unit of language:",
+            },
+          ],
+        },
+      ],
+    },
+  ]);
 
   let word = helpers.randomword();
 
@@ -28,6 +46,7 @@ export const wordIndex = (props) => {
 
   const wordComponents = wordData.map((word) => {
     wordData;
+    debugger
     return (
       <WordComponent
         word={word.word}
@@ -56,11 +75,7 @@ export const wordIndex = (props) => {
       <div className="cell grid-x">
         <div className="play-button-container float-center">
           <br />
-          <a
-            className="aux-button button-19"
-            role="button"
-            href="sessions/new"
-          >
+          <a className="aux-button button-19" role="button" href="sessions/new">
             Play!
           </a>
         </div>
@@ -68,11 +83,7 @@ export const wordIndex = (props) => {
       <div className="cell grid-x">
         <div className="play-button-container float-center">
           <br />
-          <a
-            className="aux-button button-19"
-            role="button"
-            href="/tutorial"
-          >
+          <a className="aux-button button-19" role="button" href="/tutorial">
             How to play
           </a>
         </div>

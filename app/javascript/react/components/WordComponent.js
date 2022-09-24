@@ -5,18 +5,18 @@ import { faLightbulb } from "@fortawesome/free-solid-svg-icons";
 export const WordComponent = (props) => {
 
   return (
-    <div class="grid-container tile-container">
-      <div class="grid-x grid-padding-x grid-padding-y word-tile">
-        <div class="cell card">
-          <div class="card-section">
-            <h3 class="word-word">
+    <div className="grid-container tile-container">
+      <div className="grid-x grid-padding-x grid-padding-y word-tile">
+        <div className="cell card">
+          <div className="card-section">
+            <h3 className="word-word">
               <FontAwesomeIcon icon={faLightbulb} /> {props.word}{" "}
               {props.phonetic}
             </h3>
             <hr />
             <ul>
-              <li class="word-definition">"{props.definition}"</li>
-              <li class="word-definition">"{props.definition2}"</li>
+              <li className="word-definition">"{props.definition}"</li>
+              <li className="word-definition">"{props.definition2}"</li>
             </ul>
           </div>
         </div>
