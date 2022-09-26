@@ -16,8 +16,10 @@ export const WordComponent = (props) => {
             <hr />
             <ul>
               <li className="word-definition">"{props.definition}"</li>
-              <li className="word-definition">"{props.definition2}"</li>
             </ul>
+            <div>
+              <p id="credits"> Powered by https://dictionaryapi.dev/ </p>
+            </div>
           </div>
         </div>
       </div>
