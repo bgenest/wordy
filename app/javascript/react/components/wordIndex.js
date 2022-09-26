@@ -46,13 +46,11 @@ export const wordIndex = (props) => {
 
   const wordComponents = wordData.map((word) => {
     wordData;
-    debugger
     return (
       <WordComponent
         word={word.word}
         phonetic={word.phonetic}
         definition={word.meanings[0].definitions[0].definition}
-        definition2={word.meanings[0].definitions[1].definition}
       />
     );
   });
