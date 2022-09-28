@@ -2,6 +2,9 @@ Rails.application.routes.draw do
 
   root 'homes#index'
   devise_for :users
+
+  default_url_options :host => "google.com"
+  
   devise_scope :user do 
     root to: 'static_pages#home'
     match '/sessions/user', to: 'devise/sessions#create', via: :post

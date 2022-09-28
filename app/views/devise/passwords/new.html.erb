@@ -1,0 +1,21 @@
+<div class = "float-center">
+  <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+</div>
+
+<br/>
+<div class="tile grid-container form-card">
+  <h2>Forgot your password?</h2>
+
+  <hr/>
+  <br/>
+  <div class="field forms">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  </div>
+  <br/>
+  <div class="actions">
+    <%= f.submit "Email Instructions", class: "button-19 forms" %>
+  </div>
+    <% end %>
+</div>
