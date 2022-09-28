@@ -40,6 +40,9 @@ export const WeatherTile = (props) => {
           <div className="card-section">
             <WeatherData forecast={forecast} />
           </div>
+          <div>
+              <p id="credits"> Powered by https://openweathermap.org/api </p>
+            </div>
         </div>
       </div>
     </div>
