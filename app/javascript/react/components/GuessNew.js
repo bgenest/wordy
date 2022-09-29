@@ -47,12 +47,10 @@ export const GuessNew = (props) => {
   };
 
   if (guessStatus == "win") {
-    alert(`You won! The word was ${answer}`);
     setGuessStatus(`You won! The word was ${answer}`)
   }
 
   if (guessStatus == "lose") {
-    alert(`No more guesses! The answer was ${answer}`);
     setGuessStatus(`Oh no! The word was "${answer}". Refresh to try again.`)
   }
 
