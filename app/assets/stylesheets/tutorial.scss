@@ -2,26 +2,36 @@
   font-size: larger;
   list-style-type: none ;
   padding: 2%;
-  padding-left: 15%;
+
   border-radius: 5ch;
+  
 }
 
 .tutorial {
   border-radius: 1ch;
   font-size: large;
   min-width: auto;
+
 }
 
 .tutorial-content{
-    padding-left: 15%;
 }
 
 .tutorial-button{
   width: fit-content;
-  padding-left: 40%;
+  align-self:center ;
   font-size: larger;
+  padding-inline: 43%;
 }
 
 .tutorial-title{
-  padding-left: 30%;
+  text-align: center;
+  padding-top: 5%;
+}
+
+.tutorial-container{
+  background: rgba($color: cornsilk, $alpha: .90);
+  width: fit-content;
+  align-content: center;
+  border-radius: 1ch;
 }
