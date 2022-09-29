@@ -41,3 +41,14 @@ padding-top: 10%;
 .guess-letter-tile{
   padding-inline: 2.5px;
 }
+
+.game-result{
+  background: rgba($color: cornsilk, $alpha: .3);
+  width: fit-content;
+  align-content: center;
+  border-radius: 1ch;
+  font-size: large;
+  font-weight: bold;
+  width: 100%;
+  text-align: center;
+}
