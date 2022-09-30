@@ -2,7 +2,6 @@
 
 # Wordy 
 
-A game that's like Wordle but not really.
 This app is a full-site clone of the popular game Wordle.
 
 App created with a React frontend, and a Ruby on Rails backend.
