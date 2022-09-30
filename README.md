@@ -2,12 +2,12 @@
 
 # Wordy 
 
-Kinda like Wordle but not really.
+A game that's like Wordle but not really.
 This app is a full-site clone of the popular game Wordle.
 
 App created with a React frontend, and a Ruby on Rails backend.
 
-Developed in Chrome Desktop, mobile support  to come.
+Developed in Chrome Desktop, mobile support to come.
 
 Ruby version 2.7.3
 
@@ -37,5 +37,5 @@ Production: https://thewordygame.herokuapp.com/
 <img width="849" alt="Screen Shot 2022-09-29 at 12 47 31 PM" src="https://user-images.githubusercontent.com/38561548/193090776-d0c3af89-823e-40c8-a60e-ba1c125c86a6.png">
 
 
-# Authors
+# Author
 * Bryan Genest
