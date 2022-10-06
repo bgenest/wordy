@@ -7,6 +7,7 @@
   max-width: 800px;
   .title-page {
     text-align: left;
+
   }
   .word-word {
     text-align: left;
@@ -15,10 +16,13 @@
 }
 
 .title-page {
-  padding-top: 20px;
+  padding: 20px;
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
-  backdrop-filter: blur(10%);
+
+  background: rgba($color: blanchedalmond, $alpha: .10);
+  border-radius: 1ch;
+  width: fit-content;
 }
 
 .subtitle {
