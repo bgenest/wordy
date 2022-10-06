@@ -11,7 +11,7 @@ export const WeatherData = (props) => {
 
   return ( 
     <div>
-    <h3>Weather in {data.name} <FontAwesomeIcon icon={faCity} /></h3>
+    <h3 className="Weather">Weather in {data.name} <FontAwesomeIcon icon={faCity} /></h3>
     <hr/>
     <ul className="Weather">
         <li className="weather-list-item">   Temp: <FontAwesomeIcon icon={faTemperatureHalf} /> {data.main.temp} F</li>

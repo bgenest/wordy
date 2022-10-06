@@ -12,13 +12,14 @@
   .word-word {
     text-align: left;
     text-transform: capitalize;
+    font-family: monospace;
   }
 }
 
 .title-page {
   padding: 20px;
   text-align: center;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: monospace;
 
   background: rgba($color: blanchedalmond, $alpha: .10);
   border-radius: 1ch;
@@ -27,6 +28,9 @@
 
 .subtitle {
   text-align: center;
+  background: rgba($color: blanchedalmond, $alpha: .90);
+  border-radius: 1ch;
+  width: fit-content;
 }
 
 #play-button {
@@ -38,9 +42,8 @@
 }
 
 .word-definition{
-  font-family:Arial, Helvetica, sans-serif;
   font-weight: bold;
-  font-size: large;
+  font-size:x-large;
   text-align: left;
 }
 
