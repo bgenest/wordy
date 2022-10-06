@@ -63,7 +63,7 @@ export const GuessNew = (props) => {
 
   return (
     <div className="grid-x cell">
-      <h3 className="float-center">
+      <h3 className="float-center game-title">
         Guess the word! 
         <hr/>
       </h3>

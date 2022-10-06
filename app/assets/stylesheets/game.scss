@@ -13,6 +13,10 @@
   }
 }
 
+.game-title{
+  font-family: monospace;
+}
+
 .guess-display{
   width: 50px;
   text-transform: uppercase;
@@ -23,6 +27,7 @@
   border-color: black;
   border-width: 3px;
   border-radius: 3px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .guesses-container{
