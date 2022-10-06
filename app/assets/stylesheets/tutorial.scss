@@ -1,20 +1,17 @@
 .tutorial-list{
-  font-size: larger;
+  font-size: x-large;
   list-style-type: none ;
   padding: 2%;
-
+  font-family: monospace;
   border-radius: 5ch;
   
 }
 
 .tutorial {
   border-radius: 1ch;
-  font-size: large;
+  font-size: x-large;
   min-width: auto;
 
-}
-
-.tutorial-content{
 }
 
 .tutorial-button{
@@ -27,6 +24,7 @@
 .tutorial-title{
   text-align: center;
   padding-top: 5%;
+  font-family: monospace;
 }
 
 .tutorial-container{
