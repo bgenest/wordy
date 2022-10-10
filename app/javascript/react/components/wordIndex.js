@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faNewspaper } from "@fortawesome/free-solid-svg-icons";
 
 import WordComponent from "./WordComponent";
 import WeatherTile from "./WeatherTile";
 import helpers from "./helpers";
+
 
 export const wordIndex = (props) => {
   const [wordData, setWordData] = useState([
@@ -60,40 +63,38 @@ export const wordIndex = (props) => {
   }, []);
 
   return (
-    <div class="grid-container grid-margin-x fluid">
-      <div class="grid-x float-center">
-        <div> </div>
-        <h1 class="cell title-page float-center">Welcome to Wordy!</h1>
-        <hr />
-        <br />
-      </div>
-      <div className="cell grid-x">
-        <div className="play-button-container float-center">
-          <br />
-          <a className="aux-button button-19" role="button" href="sessions/new">
-            Play!
-          </a>
-        </div>
-      </div>
-      <div className="cell grid-x">
-        <div className="play-button-container float-center">
-          <br />
-          <a className="aux-button button-19" role="button" href="/tutorial">
-            How to play
-          </a>
-        </div>
-      </div>
-      <br />
-      <br />
-      <div className="grid-x">
-        <div className="cell grid-x align-middle">
-          {wordComponents[0]}
+<div class="grid-container grid-margin-x fluid">
+  <div class="grid-x float-center">
+    <h1 class="cell title-page float-center" id="title-card">Wordy <FontAwesomeIcon icon={faNewspaper} /></h1>
 
-          <WeatherTile />
-        </div>
-      </div>
-      <br />
+    <br />
+  </div>
+  <div className="cell grid-x">
+    <div className="play-button-container float-center">
+    <br />
+    <a className="aux-button button-19" role="button" href="sessions/new">
+    Play!
+    </a>
     </div>
+  </div>
+  <div className="cell grid-x">
+    <div className="play-button-container float-center">
+    <br />
+    <a className="aux-button button-19" role="button" href="/tutorial">
+    How to play
+    </a>
+    </div>
+  </div>
+  <br />
+  <br />
+  <div className="grid-x">
+    <div className="cell grid-x align-middle">
+    {wordComponents[0]}
+    <WeatherTile />
+    </div>
+  </div>
+  <br />
+</div>
   );
 };
 
