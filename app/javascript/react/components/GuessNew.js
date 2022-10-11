@@ -64,7 +64,7 @@ export const GuessNew = (props) => {
   return (
     <div className="grid-x cell">
       <h3 className="float-center game-title">
-        Guess the word! 
+        What's the word?
         <hr/>
       </h3>
       <h4 className="game-result">
@@ -81,7 +81,7 @@ export const GuessNew = (props) => {
           name="guess"
           value={currentguess}
           onChange={handleChange}
-          placeholder="Guess the word!"
+          placeholder="enter guess here"
           className="submit-field"
         />
         <input className="aux_button button-19" type="submit" value="guess" />
