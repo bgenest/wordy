@@ -1,12 +1,13 @@
 <br/>
-<head>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></head>
-  <div>
-    <h1 class="index_title">Previous Games<i class="fa-solid fa-dice"></i>
-    </h1>
-    <hr/>
-  </div>
-  <div class="grid-x grid-padding-x grid-padding-y">
+
+<div>
+  <h1 class="index-title">
+    Previous Games
+  </h1>
+  <hr/>
+</div>
+
+<div class="grid-x grid-padding-x grid-padding-y">
 
   <%if @sessions%>
     <%if @sessions.length > 0 %>
@@ -14,48 +15,47 @@
 
       <div class="game_tile float-center index">
         <h3 id="index-card-title">
-        Game:
-        <%=session.game.id%></h3>
-      <ul class='grid-x cell float-center' id="guesses-card">
+          <ul class='grid-x cell float-center' id="guesses-card">
+            
+            <div style="list-style-type:none" class="grid-x" id="guesses">
+              <%session.guesses.each do |guess|%>
 
-        <div style="list-style-type:none" class="grid-x" id="guesses">
-          <%session.guesses.each do |guess|%>
-          
-            <%current_guess = GuessToRender.new(guess.word,session.game.answer)%>
-            <%current_guess = current_guess.format_word%>
+              <%current_guess = GuessToRender.new(guess.word,session.game.answer)%>
+              <%current_guess = current_guess.format_word%>
 
-            <%current_guess.each do |character|%>
+              <%current_guess.each do |character|%>
               <%color = character[1][:color]%>
               <%letter = character[1][:letter]%>
               <div class="guess-letter-tile">
-              <p class="guess-display" id="<%=color%>"><%=letter%></p>
+                <p class="guess-display" id="<%=color%>"><%=letter%></p>
               </div>
-            <%end%>
-          <%end%>
+              <%end%>
+              <%end%>
+            </div><div class="answer-section float-center">
+              Answer:
+              <p class="cell card" id="answer">
+                <%=session.game.answer%></p>
+            </div>
+          </ul>
+
+          <br/>
+
         </div>
-      </ul>
+        <%end%>
 
-      <br/>
-      <div class="answer-section">
+        <%else%>
+        <div class="float-center" id="no-games-message">
+          <h3>You have no previous games, get playing!</h3>
+          <div>
+            <%end%>
 
-      <%if session.guesses.length >= 5%>
-          Answer:
-          <p class="cell " id="answer">
-            <%=session.game.answer%></p>
-      <%end%>
-  
-      </div>
-      </div>
-    <%end%>
-    <%else%>
-    <div class="float-center">
-    <h3>You have no previous games, get playing!</h3>
-    <div>
-    <%end%>
-    <%else%>
-    <div class="float-center">
-      <h3>Welcome! Sign in to view your previous games.</h3>
-    </div>
+            <%else%>
+            <div class="float-center" id="no-games-message">
+              <h3>Welcome! Sign in to view your previous games.</h3>
+            </div>
 
 
-    <%end%>
+            <%end%>
+
+          </div>
+        </div>

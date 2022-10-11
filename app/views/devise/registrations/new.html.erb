@@ -4,16 +4,16 @@
 </div>
 
 <br/>
-<div class="tile grid-container form-card">
-  <h2>Sign up</h2>
+<div class="card grid-container float-center form-card">
+  <h2 class="title-form">Sign up</h2>
   <hr/>
-  <div class="field forms">
-    <%= f.label :email %><br/>
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  <div class="field forms float-center">
+    <%= f.label :email, class: "label-form" %><br/>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email"%>
   </div>
 
-  <div class="field forms">
-    <%= f.label :password %>
+  <div class="field forms float-center">
+    <%= f.label :password, class: "label-form" %>
     <% if @minimum_password_length %>
     <em>(<%= @minimum_password_length %> characters minimum)
     </em>
@@ -22,10 +22,10 @@
     <%= f.password_field :password, autocomplete: "new-password" %>
   </div>
 
-  <p class="help-text" id="passwordHelpText">Your password must have at least 6 characters, and a number.</p>
+  <p class="help-text " id="passwordHelpText">Your password must have at least 6 characters, and a number.</p>
 
-  <div class="field forms">
-    <%= f.label :password_confirmation %><br/>
+  <div class="field forms float-center">
+    <%= f.label :password_confirmation, class: "label-form" %><br/>
     <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
   </div>
 
