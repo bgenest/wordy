@@ -66,31 +66,30 @@ export const wordIndex = (props) => {
 <div class="grid-container grid-margin-x fluid">
   <div class="grid-x float-center">
     <h1 class="cell title-page float-center" id="title-card">Wordy <FontAwesomeIcon icon={faNewspaper} /></h1>
-
     <br />
   </div>
   <div className="cell grid-x">
     <div className="play-button-container float-center">
     <br />
-    <a className="aux-button button-19" role="button" href="sessions/new">
-    Play!
-    </a>
+      <a className="aux-button button-19" role="button" href="sessions/new">
+        Play
+      </a>
     </div>
   </div>
   <div className="cell grid-x">
     <div className="play-button-container float-center">
     <br />
-    <a className="aux-button button-19" role="button" href="/tutorial">
-    How to play
-    </a>
+      <a className="aux-button button-19" role="button" href="/tutorial">
+        How to play
+      </a>
     </div>
   </div>
   <br />
   <br />
   <div className="grid-x">
     <div className="cell grid-x align-middle">
-    {wordComponents[0]}
-    <WeatherTile />
+      {wordComponents[0]}
+      <WeatherTile />
     </div>
   </div>
   <br />
