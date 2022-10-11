@@ -24,15 +24,11 @@ body{
 .aux_button {
   background-color: $blue;
   color: $white;
-  border-radius: 1ch;
+  border-radius: 0ch;
 }
 
 .game_tile {
   height: 300px;
-}
-
-.index_title{
-  text-align: center;
 }
 
 .index {
@@ -41,6 +37,7 @@ body{
   min-width: 375px;
   max-height: 575px;
   min-height: 575px;
+  padding-bottom: 0%;
 }
 
 #guesses {
@@ -67,7 +64,7 @@ body{
 }
 
 .card {
-  background-color: ivory;
+  background-color: #E4D6B5;
   border-radius: 1ch;
   border-color: black;
   border-width: 3px;
@@ -118,6 +115,11 @@ body{
 
 .forms{
 max-width: 300px;
+height: fit-content;
+}
+
+.forms-bottom{
+  padding-bottom: 5%;
 }
 
 .button-forms{
@@ -131,7 +133,9 @@ max-width: 300px;
 
 .form-card{
   max-width:350px;
-  padding-left: 50px;
+  text-align: center;
+  font-family: monospace;
+  font-size: larger;
 }
 
 .options{

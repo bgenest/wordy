@@ -73,8 +73,7 @@ export const GuessNew = (props) => {
       <div className="grid-x">
         {renderThese}
       </div>
-
-      <form onSubmit={handleSubmit} className="float-center guess-form">
+        <form onSubmit={handleSubmit} className="float-center guess-form" >
         <input
           maxLength={6}
           type="text"
@@ -82,10 +81,12 @@ export const GuessNew = (props) => {
           value={currentguess}
           onChange={handleChange}
           placeholder="enter guess here"
-          className="submit-field"
+          className=""
         />
-        <input className="aux_button button-19" type="submit" value="guess" />
+        <input className="button-19" type="submit" value="guess" />
       </form>
+
+      
     </div>
   );
 };

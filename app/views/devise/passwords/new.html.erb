@@ -4,18 +4,18 @@
 </div>
 
 <br/>
-<div class="tile grid-container form-card">
-  <h2>Forgot your password?</h2>
+<div class="tile grid-container form-card card">
+  <h2 class="title-form">Forgot your password?</h2>
 
   <hr/>
   <br/>
   <div class="field forms">
-    <%= f.label :email %><br />
+    <%= f.label :email , class: "label-form" %><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
   </div>
   <br/>
-  <div class="actions">
-    <%= f.submit "Email Instructions", class: "button-19 forms" %>
+  <div class="actions forms-bottom">
+    <%= f.submit "Email Instructions", class: "button-19" %>
   </div>
     <% end %>
 </div>
