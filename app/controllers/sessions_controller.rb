@@ -6,9 +6,10 @@ class SessionsController < ApplicationController
     if current_user
       user = current_user.id
       @sessions = Session.where(user: user)
-
     end
+  end
 
+  def show
   end
 
 end

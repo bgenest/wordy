@@ -1,7 +1,7 @@
 class Api::V1::SessionsController < ApplicationController
 
   def show
-
+    @session = Session.new
   end
 
   def index
@@ -26,4 +26,5 @@ class Api::V1::SessionsController < ApplicationController
       render 'new'
     end
   end
+  
 end

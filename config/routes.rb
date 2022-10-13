@@ -34,6 +34,7 @@ Rails.application.routes.draw do
 
     get "/games", to: "games#index"
     get "/tutorial", to: "tutorial#index"
+    get "/games/daily", to: "games#show"
     get "/api/v1/forecast"
     post "/api/v1/sessions"
     

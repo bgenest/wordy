@@ -51,7 +51,7 @@ export const GuessNew = (props) => {
   }
 
   if (guessStatus == "lose") {
-    setGuessStatus(`Oh no! The word was "${answer}". Refresh to try again.`)
+    setGuessStatus(`Oh no! The word was "${answer}". Better luck next time...`)
   }
 
   const renderThese = guessRender.map((guess) => {
