@@ -68,14 +68,21 @@ export const wordIndex = (props) => {
 
   return (
 <div className="grid-container grid-padding-x fluid">
-  <div className="grid-x">
-    <h1 className="cell auto title-page float-center" id="title-card">
-    Wordy 
-    <FontAwesomeIcon icon={faNewspaper} />
-    </h1>
-    <br />
+
+
+  <div className="grid-container tile-container" id ="game-option-tile">
+    <div className="grid-x grid-padding-x grid-padding-y word-tile title-card">
+      <div className="cell card">
+        <h1 className="cell auto title-page float-center title-card">
+          Wordy 
+          <FontAwesomeIcon icon={faNewspaper} />
+        </h1>
+        <br />
+      </div>
+    </div>
   </div>
     <br />
+
     <div className= "tile-container grid-container">
 
 
@@ -101,7 +108,7 @@ export const wordIndex = (props) => {
         url={"/tutorial"}
         title={"Tutorial"}
         description={"Learn how to play."}
-        icon={<FontAwesomeIcon icon={faCalendar}/>}
+        icon={<FontAwesomeIcon icon={faQuestion}/>}
       />
       </div>
       </div>
