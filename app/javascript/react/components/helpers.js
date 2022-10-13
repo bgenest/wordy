@@ -42,7 +42,7 @@ const helpers = {
         } 
        else {
         letterStatus = "Incorrect";
-      }ÍÍ
+      }
 
 
         let letterKey = `letter${i+1}`
