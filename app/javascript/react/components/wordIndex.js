@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faNewspaper } from "@fortawesome/free-solid-svg-icons";
 
 import WordComponent from "./WordComponent";
-import WeatherTile from "./WeatherTile";
+import GameTypeTile from "./GameTypeTile"
 import helpers from "./helpers";
 
 
@@ -63,33 +63,44 @@ export const wordIndex = (props) => {
   }, []);
 
   return (
-<div class="grid-container grid-margin-x fluid">
-  <div class="grid-x float-center">
-    <h1 class="cell title-page float-center" id="title-card">Wordy <FontAwesomeIcon icon={faNewspaper} /></h1>
+<div className="grid-container grid-padding-x fluid">
+  <div className="grid-x">
+    <h1 className="cell auto title-page float-center" id="title-card">Wordy <FontAwesomeIcon icon={faNewspaper} /></h1>
     <br />
   </div>
-  <div className="cell grid-x">
-    <div className="play-button-container float-center">
     <br />
-      <a className="aux-button button-19" role="button" href="sessions/new">
-        Play
-      </a>
-    </div>
-  </div>
-  <div className="cell grid-x">
-    <div className="play-button-container float-center">
-    <br />
-      <a className="aux-button button-19" role="button" href="/tutorial">
-        How to play
-      </a>
-    </div>
-  </div>
+    <div className= " tile-container grid-container">
+
+
+      <div className="cell small-auto">
+      <GameTypeTile
+        url={"/sessions/new"}
+        title={"Random Word"}
+        description={"Random word every time you play! Good for practice."}
+      />
+      </div>
+      <div className="cell small-auto">
+      <GameTypeTile
+        url={"/games/daily"}
+        title={"Daily word"}
+        description={"Everyone gets the same word. Refreshed daily"}
+      />
+      </div>
+
+      <div className="cell small-auto">
+      <GameTypeTile
+        url={"/tutorial"}
+        title={"Tutorial"}
+        description={"Learn how to play."}
+      />
+      </div>
+      </div>
+
   <br />
   <br />
   <div className="grid-x">
     <div className="cell grid-x align-middle">
       {wordComponents[0]}
-      <WeatherTile />
     </div>
   </div>
   <br />
