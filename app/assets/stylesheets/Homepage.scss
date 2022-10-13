@@ -5,6 +5,7 @@
   border-radius: 2ch;
   border-color: black;
   max-width: 800px;
+  padding-right:10px;
   .title-page {
     text-align: left;
 
@@ -98,5 +99,26 @@
 
 .tile-container{
   padding-top: 10px;
+  padding-right: 10px;
 }
 
+#game-title{
+  font-size: xx-large;
+  font-weight: bold;
+  max-width: 400px;
+  min-width: 350px;
+  padding: 0%;
+  text-align: left;
+}
+
+#game-description{
+  font-size: x-large;
+  padding-bottom: 5%;
+}
+
+#game-option-tile{
+  max-width: 400px;
+  min-width: 350px;
+  display:block;
+
+}
