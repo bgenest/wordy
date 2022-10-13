@@ -28,7 +28,8 @@
   border-color: black;
   border-width: 3px;
   border-radius: 3px;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: Arial;
+
 }
 
 .guesses-container{
@@ -58,4 +59,11 @@ padding-top: 10%;
   font-weight: bold;
   width: 100%;
   text-align: center;
+}
+
+#gametype{
+  font-family: monospace;
+  text-align:center;
+  font-weight: bolder;
+  font-size: xx-large;
 }

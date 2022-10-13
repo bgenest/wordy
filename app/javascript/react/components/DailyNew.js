@@ -11,19 +11,8 @@ export const SessionNew = (props) => {
     createSession();
   }, []);
 
-  const getGames = async () => {
-    try {
-      const response = await fetch(`/api/v1/games/1`);
-      if (!response.ok) {
-        const errorMessage = `${response.status} (${response.statusText})`;
-        const error = new Error(errorMessage);
-        throw error;
-      }
-      const gameData = await response.json();
-      setGame(gameData);
-    } catch (error) {
-      console.error(`Error in fetch: ${error.message}`);
-    }
+  const getGames = ()=>{
+    setGame({id: 9999, answer: 'serves', created_at: '', updated_at: ''})
   };
 
   const createSession = async (event) => {
@@ -64,6 +53,7 @@ export const SessionNew = (props) => {
         },
         body: JSON.stringify(formPayload),
       });
+      
       if (!response.ok) {
         const errorMessage = `${response.status} (${response.statusText})`;
         setErrorMessages(errorMessage);
@@ -76,9 +66,10 @@ export const SessionNew = (props) => {
 
   return (
     <div className="game-card-container float-center">
+
       <br />
       <br />
-      <h1 className="float-center"id="gametype">Random Game!</h1>
+      <h1 className="float-center"id="gametype">Daily Game!</h1>
       <div className="">
         <div className="new-game-card">
           <div className="">
