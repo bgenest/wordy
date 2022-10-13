@@ -32,7 +32,7 @@ const helpers = {
   newCompare(guess, answer) {
 
     let resultObject = {};
-    let globalAnswer = answer
+
 
     for (let i = 0; i < 6; i++) {
       let letterStatus;
@@ -52,19 +52,20 @@ const helpers = {
     }
 
     for (let i = 0; i < 6; i++) {
-      let answer = globalAnswer
       let letterStatus;
       let currentLetter = guess[i]
-      if (answer.includes(currentLetter) && currentLetter !== answer[i]) {
-       
-        answer = answer.replace(guess[i],"_")
-        letterStatus = "correct-letter";
+      if (resultObject[`class${i+1}`] != "correct-letter-spot"){
+        if (answer.includes(currentLetter) && currentLetter !== answer[i]) {
+         
+          answer = answer.replace(guess[i],"_")
+          letterStatus = "correct-letter";
 
-        let letterKey = `letter${i+1}`
-        let letterID  = `class${i+1}`
-        resultObject[letterKey] = guess[i] 
-        resultObject[letterID] =  letterStatus ;
-      } 
+          let letterKey = `letter${i+1}`
+          let letterID  = `class${i+1}`
+          resultObject[letterKey] = guess[i] 
+          resultObject[letterID] =  letterStatus ;
+        } 
+      }
     }
 
     return resultObject;
