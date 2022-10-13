@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from "react";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faNewspaper } from "@fortawesome/free-solid-svg-icons";
+import { faDice } from "@fortawesome/free-solid-svg-icons";
+import { faCalendar } from "@fortawesome/free-solid-svg-icons";
+import { faQuestion } from "@fortawesome/free-solid-svg-icons";
 
 import WordComponent from "./WordComponent";
 import GameTypeTile from "./GameTypeTile"
@@ -65,17 +69,21 @@ export const wordIndex = (props) => {
   return (
 <div className="grid-container grid-padding-x fluid">
   <div className="grid-x">
-    <h1 className="cell auto title-page float-center" id="title-card">Wordy <FontAwesomeIcon icon={faNewspaper} /></h1>
+    <h1 className="cell auto title-page float-center" id="title-card">
+    Wordy 
+    <FontAwesomeIcon icon={faNewspaper} />
+    </h1>
     <br />
   </div>
     <br />
-    <div className= " tile-container grid-container">
+    <div className= "tile-container grid-container">
 
 
       <div className="cell small-auto">
       <GameTypeTile
         url={"/sessions/new"}
-        title={"Random Word"}
+        title={"Random word"}
+        icon={<FontAwesomeIcon icon={faDice}/>}
         description={"Random word every time you play! Good for practice."}
       />
       </div>
@@ -84,6 +92,7 @@ export const wordIndex = (props) => {
         url={"/games/daily"}
         title={"Daily word"}
         description={"Everyone gets the same word. Refreshed daily"}
+        icon={<FontAwesomeIcon icon={faCalendar}/>}
       />
       </div>
 
@@ -92,6 +101,7 @@ export const wordIndex = (props) => {
         url={"/tutorial"}
         title={"Tutorial"}
         description={"Learn how to play."}
+        icon={<FontAwesomeIcon icon={faCalendar}/>}
       />
       </div>
       </div>

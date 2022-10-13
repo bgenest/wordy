@@ -1,5 +1,8 @@
 import React from "react";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faDice } from "@fortawesome/free-solid-svg-icons";
+
 export const GameTypeTile = (props) => {
 
 
@@ -10,7 +13,7 @@ export const GameTypeTile = (props) => {
       
       <div className="cell card">
 
-          <div className="float-center" id="game-title"> {props.title}
+          <div className="float-center" id="game-title"> {props.title} {props.icon}
           </div>
           <hr/>
           <div id="game-description"> {props.description}
