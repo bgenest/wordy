@@ -32,6 +32,7 @@ const helpers = {
   newCompare(guess, answer) {
 
     let resultObject = {};
+    let globalAnswer = answer
 
     for (let i = 0; i < 6; i++) {
       let letterStatus;
@@ -41,7 +42,9 @@ const helpers = {
         } 
        else {
         letterStatus = "Incorrect";
-      }
+      }ÍÍ
+
+
         let letterKey = `letter${i+1}`
         let letterID  = `class${i+1}`
         resultObject[letterKey] = guess[i] 
@@ -49,12 +52,14 @@ const helpers = {
     }
 
     for (let i = 0; i < 6; i++) {
+      let answer = globalAnswer
       let letterStatus;
       let currentLetter = guess[i]
       if (answer.includes(currentLetter) && currentLetter !== answer[i]) {
        
         answer = answer.replace(guess[i],"_")
         letterStatus = "correct-letter";
+
         let letterKey = `letter${i+1}`
         let letterID  = `class${i+1}`
         resultObject[letterKey] = guess[i] 
@@ -65,6 +70,7 @@ const helpers = {
     return resultObject;
 
   },
+
   checkLength(guess) {
     if (guess.length == 6) {
       return true;
