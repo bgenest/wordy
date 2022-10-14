@@ -6,7 +6,9 @@ import GuessTell from "./GuessTell";
 
 export const GuessNew = (props) => {
   const [currentguess, setCurrentGuess] = useState([]);
-  const [guessStatus, setGuessStatus] = useState([]);
+  const [guessStatus, setGuessStatus] = useState(
+    "What's the word?"
+    );
   const [guessRender, setGuessRender] = useState([]);
   const [count, setCount] = useState(0);
 
@@ -47,7 +49,7 @@ export const GuessNew = (props) => {
   };
 
   if (guessStatus == "win") {
-    setGuessStatus(`You won! The word was ${answer}`)
+    setGuessStatus(`You won! The word was "${answer}".`)
   }
 
   if (guessStatus == "lose") {
@@ -63,15 +65,22 @@ export const GuessNew = (props) => {
 
   return (
     <div className="grid-x cell">
-      <h3 className="float-center game-title">
-      ____________________
-      </h3>
+      <div className="grid-container tile-container">
+        <div className="grid-x grid-padding-x grid-padding-y word-tile">
+          <div className="cell card">
+
       <h4 className="game-result">
         {guessStatus}
       </h4>
-      <div className="grid-x">
-        {renderThese}
+
+          </div>
+        </div>
       </div>
+      
+            <div className="grid-x">
+              {renderThese}
+            </div>
+      
         <form onSubmit={handleSubmit} className="float-center guess-form" >
         <input
           maxLength={6}
@@ -84,8 +93,7 @@ export const GuessNew = (props) => {
         />
         <input className="button-19" type="submit" value="guess" />
       </form>
-
-      
+ 
     </div>
   );
 };
