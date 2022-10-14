@@ -1,53 +1,66 @@
 <br/>
-<div class="grid-container tutorial-container">
-  <h1 class = "tutorial-title">How to Play:</h1>
-  <ul class="tutorial-list">
-    <p>The name of the game is guessing the secret word, and you only get 5 guesses.
-    </p>
-    <p>For instance, if the secret word was "Haggle", and you guessed "Honest",
-    </p>
-    <p>the letters will be highlighted one of 3 colors:
-    </p>
-    <div>
-      <div class="grid-x tutorial-content">
-        <div class="guess-letter-tile"><br>
-          <div class="cell guess-display" id="correct-letter-spot">
-            h
+<div class="grid-container">
+
+  <div className="grid-container tile-container">
+  <div className="grid-x grid-padding-x grid-padding-y word-tile">
+    <div class="cell card">
+    <h1 class = "tutorial-title">How to Play:</h1>
+    <hr/>
+    <ul class="tutorial-list">
+      <p>
+        The name of the game is guessing the secret word, and you only get 5 guesses.
+      </p>
+      <p>
+        For instance, if the secret word was "Haggle", and you guessed "Honest",
+      </p>
+      <p>
+        the letters will be highlighted one of 3 colors:
+      </p>
+
+
+      <div>
+        <div class="grid-x tutorial-content">
+          <div class="guess-letter-tile"><br>
+            <div class="cell guess-display" id="correct-letter-spot">
+              h
+            </div>
           </div>
-        </div>
-        <div class="guess-letter-tile">
-          <br>
-          <div class="cell guess-display" id="Incorrect">
-            o
+          <div class="guess-letter-tile">
+            <br>
+            <div class="cell guess-display" id="Incorrect">
+              o
+            </div>
           </div>
-        </div>
-        <div class="guess-letter-tile">
-          <br>
-          <div class="cell guess-display" id="Incorrect">
-            n
+          <div class="guess-letter-tile">
+            <br>
+            <div class="cell guess-display" id="Incorrect">
+              n
+            </div>
           </div>
-        </div>
-        <div class="guess-letter-tile">
-          <br>
-          <div class="cell guess-display" id="correct-letter">
-            e
+          <div class="guess-letter-tile">
+            <br>
+            <div class="cell guess-display" id="correct-letter">
+              e
+            </div>
           </div>
-        </div>
-        <div class="guess-letter-tile">
-          <br>
-          <div class="cell guess-display" id="Incorrect">
-            s
+          <div class="guess-letter-tile">
+            <br>
+            <div class="cell guess-display" id="Incorrect">
+              s
+            </div>
           </div>
-        </div>
-        <div class="guess-letter-tile">
-          <br>
-          <div class="cell guess-display" id="Incorrect">
-            t
+          <div class="guess-letter-tile">
+            <br>
+            <div class="cell guess-display" id="Incorrect">
+              t
+            </div>
           </div>
         </div>
       </div>
-    </div>
+
+
     <br/>
+
     <p>If the letter is highlighted yellow, it's in the word, but it's in the incorrect spot.
     </p>
     <p>If the letter is highlighted green, it's in the word, and it's in the correct spot.
@@ -56,9 +69,15 @@
     </p>
     <li>Good luck, and have fun!
     </li>
+
   </ul>
   <div class="cell tutorial-button">
-  <%= link_to "Play!", new_session_path, class: ' cell button-19 button-forms' %>
+  <%= link_to "Practice game", new_session_path, class: ' cell button-19 button-forms' %>
   </div>
   <br/>
+
+      </div>
+  </div>
+</div>
+</div>
 </div>
