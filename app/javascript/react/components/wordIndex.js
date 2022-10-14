@@ -74,7 +74,7 @@ export const wordIndex = (props) => {
     <div className="grid-x grid-padding-x grid-padding-y word-tile title-card">
       <div className="cell card">
         <h1 className="cell auto title-page float-center title-card">
-          Wordy 
+          Wordy
           <FontAwesomeIcon icon={faNewspaper} />
         </h1>
         <br />
@@ -85,6 +85,14 @@ export const wordIndex = (props) => {
 
     <div className= "tile-container grid-container">
 
+      <div className="cell small-auto">
+      <GameTypeTile
+        url={"/games/daily"}
+        title={"Daily word"}
+        description={"Everyone gets the same word. Refreshed daily."}
+        icon={<FontAwesomeIcon icon={faCalendar}/>}
+      />
+      </div>
 
       <div className="cell small-auto">
       <GameTypeTile
@@ -92,14 +100,6 @@ export const wordIndex = (props) => {
         title={"Random word"}
         icon={<FontAwesomeIcon icon={faDice}/>}
         description={"Random word every time you play! Good for practice."}
-      />
-      </div>
-      <div className="cell small-auto">
-      <GameTypeTile
-        url={"/games/daily"}
-        title={"Daily word"}
-        description={"Everyone gets the same word. Refreshed daily"}
-        icon={<FontAwesomeIcon icon={faCalendar}/>}
       />
       </div>
 
