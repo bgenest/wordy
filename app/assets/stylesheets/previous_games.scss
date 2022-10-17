@@ -1,6 +1,10 @@
-#no-games-message{
+.no-games-message{
+  background-color: #E4D6B5;
   width: 100%;
   text-align: center;
+  border-style: outset; 
+  border-color: black;
+  font-family: monospace;
 }
 .answer-section{
   text-align: center;
@@ -19,5 +23,9 @@
   font-family: monospace;
   background-color: #E4D6B5;
   width:200px;
-  border-radius: 1ch,
+  border-radius: 1ch;
+  padding:0%;
+  border-style: outset; 
+  border-color: black;
+  min-width: 400px
 }
