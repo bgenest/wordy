@@ -12,7 +12,7 @@ export const SessionNew = (props) => {
   }, []);
 
   const getGames = ()=>{
-    setGame({id: 9999, answer: 'belief', created_at: '', updated_at: ''})
+    setGame({id: 9999, answer: 'aliens', created_at: '', updated_at: ''})
   };
 
   const createSession = async (event) => {
