@@ -68,8 +68,6 @@ export const wordIndex = (props) => {
 
   return (
 <div className="grid-container grid-padding-x fluid">
-
-
   <div className="grid-container tile-container" id ="game-option-tile">
     <div className="grid-x grid-padding-x grid-padding-y word-tile title-card">
       <div className="cell card">
@@ -77,47 +75,42 @@ export const wordIndex = (props) => {
           Wordy
           <FontAwesomeIcon icon={faNewspaper} />
         </h1>
-        <br />
+      <br />
       </div>
     </div>
   </div>
-    <br />
-
-    <div className= "tile-container grid-container">
-
-      <div className="cell small-auto">
+  <br />
+  <div className= "tile-container grid-container">
+    <div className="cell small-auto">
       <GameTypeTile
-        url={"/games/daily"}
-        title={"Daily word"}
-        description={"Everyone gets the same word. Refreshed daily."}
-        icon={<FontAwesomeIcon icon={faCalendar}/>}
+      url={"/games/daily"}
+      title={"Daily word"}
+      description={"Everyone gets the same word. Refreshed daily."}
+      icon={<FontAwesomeIcon icon={faCalendar}/>}
       />
       </div>
-
       <div className="cell small-auto">
       <GameTypeTile
-        url={"/sessions/new"}
-        title={"Random word"}
-        icon={<FontAwesomeIcon icon={faDice}/>}
-        description={"Random word every time you play! Good for practice."}
+      url={"/sessions/new"}
+      title={"Random word"}
+      icon={<FontAwesomeIcon icon={faDice}/>}
+      description={"Random word every time you play! Good for practice."}
       />
       </div>
-
       <div className="cell small-auto">
       <GameTypeTile
-        url={"/tutorial"}
-        title={"Tutorial"}
-        description={"Learn how to play."}
-        icon={<FontAwesomeIcon icon={faQuestion}/>}
+      url={"/tutorial"}
+      title={"Tutorial"}
+      description={"Learn how to play."}
+      icon={<FontAwesomeIcon icon={faQuestion}/>}
       />
-      </div>
-      </div>
-
+    </div>
+  </div>
   <br />
   <br />
   <div className="grid-x">
     <div className="cell grid-x align-middle">
-      {wordComponents[0]}
+    {wordComponents[0]}
     </div>
   </div>
   <br />

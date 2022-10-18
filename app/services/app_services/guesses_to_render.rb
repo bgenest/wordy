@@ -42,12 +42,10 @@ class GuessToRender
          rendered_guess[index] = format_letter(letter,color)
       end
 
-      
       index += 1
   end
     return rendered_guess
   end
-
 
 end 
 
