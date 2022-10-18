@@ -3580,7 +3580,7 @@ export const WORDS = [
   'ramped', 'ramrod', 'ramson', 'ramtil', 'rances', 'rancho', 'rancid', 'rancor', 'randan', 'random',
   'ranees', 'ranged', 'ranger', 'ranges', 'ranids', 'ranked', 'ranker', 'rankle', 'rankly', 'ransom',
   'ranted', 'ranter', 'ranula', 'rapers', 'raphae', 'raphes', 'raphia', 'raphis', 'rapids', 'rapier',
-  'rapine', 'raping', 'rapini', 'rapist', 'rapped', 'rappee', 'rappel', 'rappen', 'rapper', 'raptly',
+  'rapine', 'rapini', 'rapped', 'rappee', 'rappel', 'rappen', 'rapper', 'raptly',
   'raptor', 'rarefy', 'rarely', 'rarest', 'rarify', 'raring', 'rarity', 'rascal', 'rasers', 'rasher',
   'rashes', 'rashly', 'rasing', 'rasped', 'rasper', 'rassle', 'raster', 'rasure', 'ratals', 'ratans',
   'ratany', 'ratbag', 'ratels', 'raters', 'rather', 'ratify', 'ratine', 'rating', 'ration', 'ratios',
