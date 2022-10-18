@@ -1,62 +1,62 @@
 
-    <nav class="top-bar nav">
-      <div class="grid-x grid-padding-x">
-        <div class="small-5 cell nav">
-          <h1>
-            <a class="nav title" href="/">
-              Wordy
-            </a>
-          </h1>
-        </div>
-        <h3 class="nav">
-          The word game about words
-        </h3>
-      </div>
+<nav class="top-bar nav">
+  <div class="grid-x grid-padding-x">
+    <div class="small-5 cell nav">
+      <h1>
+        <a class="nav title" href="/">
+          Wordy
+        </a>
+      </h1>
+    </div>
+    <h3 class="nav">
+      The word game about words
+    </h3>
+  </div>
 
-      <div class="user-tile">
-        <%- if current_user -%>
-          <p>
-            +Hello,
-            <%=current_user.email%>!+</p>
-          <%- end -%>
-      </div>
-        <section class="top-bar-section nav">
+  <div class="user-tile">
+    <%- if current_user -%>
+      <p>
+        +Hello,
+        <%=current_user.email%>!+</p>
+      <%- end -%>
+  </div>
+    <section class="top-bar-section nav">
 
-          <ul class="vertical dropdown menu nav" data-dropdown-menu>
-            <li class="nav">
-              <a class="button large nav" id="nav-bar-menu">
-                <i class="fa-solid menu-icon"></i>
+      <ul class="vertical dropdown menu nav" data-dropdown-menu>
+        <li class="nav">
+          <a class="button large nav" id="nav-bar-menu">
+            <i class="fa-solid menu-icon"></i>
+          </a>
+          <ul style="list-style-type:none">
+
+            <%- if current_user -%>
+              <%= link_to 'Sign out', destroy_user_session_path, method: :delete, class: "nav-menu" %>
+            <%- else -%>
+              <%= link_to 'Sign up', new_user_registration_path, class: "nav-menu" %>
+              <%= link_to 'Sign in', new_user_session_path, class: "nav-menu" %>
+              <%- end -%>
+
+              <a class='nav-menu' href="/sessions/new">
+                Random Game
               </a>
-              <ul style="list-style-type:none">
+              <a class='nav-menu' href="/games/daily">
+                Daily Game
+              </a>
+              <a class='nav-menu' href="/tutorial">
+                How to Play
+              </a>
+              <a class='nav-menu' href="/sessions">
+                Previous Games
+              </a>
+              <a class='nav-menu' href="/">
+                Homepage
+              </a>
 
-                <%- if current_user -%>
-                  <%= link_to 'Sign out', destroy_user_session_path, method: :delete, class: "nav-menu" %>
-                <%- else -%>
-                  <%= link_to 'Sign up', new_user_registration_path, class: "nav-menu" %>
-                  <%= link_to 'Sign in', new_user_session_path, class: "nav-menu" %>
-                  <%- end -%>
-
-                  <a class='nav-menu' href="/sessions/new">
-                    Random Game
-                  </a>
-                  <a class='nav-menu' href="/games/daily">
-                    Daily Game
-                  </a>
-                  <a class='nav-menu' href="/tutorial">
-                    How to Play
-                  </a>
-                  <a class='nav-menu' href="/sessions">
-                    Previous Games
-                  </a>
-                  <a class='nav-menu' href="/">
-                    Homepage
-                  </a>
-
-                </ul>
-              </li>
-            </li>
-          </ul>
-        </section>
-      </nav>
+            </ul>
+          </li>
+        </li>
+      </ul>
+    </section>
+</nav>
 
       

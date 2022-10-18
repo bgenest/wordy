@@ -9,6 +9,7 @@ Rails.application.routes.draw do
     root to: 'static_pages#home'
     match '/sessions/user', to: 'devise/sessions#create', via: :post
   end
+  
   resources :sessions, only: [:index, :create, :show, :new]
   resources :users, only: [:index, :create, :show, :new]
   resources :games, only: [:index, :create, :show, :new]
@@ -38,5 +39,4 @@ Rails.application.routes.draw do
     get "/api/v1/forecast"
     post "/api/v1/sessions"
     
-
 end

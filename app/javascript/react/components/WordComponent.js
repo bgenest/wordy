@@ -10,15 +10,17 @@ export const WordComponent = (props) => {
         <div className="cell card">
           <div className="card-section">
             <h3 className="word-word">
-              <FontAwesomeIcon icon={faLightbulb} /> {props.word}{" "}
-              {props.phonetic}
+              <FontAwesomeIcon icon={faLightbulb} /> 
+              {' '}{props.word}{" "} {props.phonetic}
             </h3>
-            <hr />
+            <hr/>
             <ul>
               <li className="word-definition">"{props.definition}"</li>
             </ul>
             <div>
-              <p id="credits"> Powered by https://dictionaryapi.dev/ </p>
+              <p id="credits"> 
+                Powered by https://dictionaryapi.dev/ 
+              </p>
             </div>
           </div>
         </div>

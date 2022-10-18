@@ -77,13 +77,14 @@ export const SessionNew = (props) => {
 
   return (
     <div className="game-card-container float-center">
-
       <br />
       <br />
       <div className="grid-container tile-container">
         <div className="grid-x grid-padding-x grid-padding-y word-tile">
           <div className="cell card">
-             <h1 className="float-center"id="gametype">Daily Game</h1>
+             <h1 className="float-center"id="gametype">
+             Daily Game
+             </h1>
           </div>
         </div>
       </div>

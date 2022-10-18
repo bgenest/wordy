@@ -78,16 +78,17 @@ export const SessionNew = (props) => {
     <div className="game-card-container float-center">
       <br />
       <br />
-      
       <div className="grid-container tile-container">
         <div className="grid-x grid-padding-x grid-padding-y word-tile">
           <div className="cell card">
-             <h1 className="float-center"id="gametype">Random Game</h1>
+             <h1 className="float-center"id="gametype">
+              Random Game
+             </h1>
           </div>
         </div>
       </div>
       <div className="new-game-card">
-        <GuessNew game={game} submitGuess={submitGuess} />
+        <GuessNew game={game} submitGuess={submitGuess}/>
       </div>
     </div>
   );

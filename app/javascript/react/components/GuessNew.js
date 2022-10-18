@@ -64,36 +64,32 @@ export const GuessNew = (props) => {
   });
 
   return (
+    
     <div className="grid-x cell">
       <div className="grid-container tile-container">
         <div className="grid-x grid-padding-x grid-padding-y word-tile">
           <div className="cell card">
-
-      <h4 className="game-result">
-        {guessStatus}
-      </h4>
-
+            <h4 className="game-result">
+              {guessStatus}
+            </h4>
           </div>
         </div>
       </div>
-      
-            <div className="grid-x">
-              {renderThese}
-            </div>
-      
-        <form onSubmit={handleSubmit} className="float-center guess-form" >
+      <div className="grid-x">
+        {renderThese}
+      </div>
+      <form onSubmit={handleSubmit} className="float-center guess-form" >
         <input
-          maxLength={6}
-          type="text"
-          name="guess"
-          value={currentguess}
-          onChange={handleChange}
-          placeholder="enter guess here"
-          className=""
+        maxLength={6}
+        type="text"
+        name="guess"
+        value={currentguess}
+        onChange={handleChange}
+        placeholder="enter guess here"
+        className=""
         />
         <input className="button-19" type="submit" value="guess" />
       </form>
- 
     </div>
   );
 };

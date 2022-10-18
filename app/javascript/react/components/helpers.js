@@ -28,11 +28,9 @@ const helpers = {
       return false
     }
   },
-
   newCompare(guess, answer) {
 
     let resultObject = {};
-
 
     for (let i = 0; i < 6; i++) {
       let letterStatus;
@@ -43,7 +41,6 @@ const helpers = {
        else {
         letterStatus = "Incorrect";
       }
-
 
         let letterKey = `letter${i+1}`
         let letterID  = `class${i+1}`
@@ -88,7 +85,7 @@ const helpers = {
     for (let i = 0; i < 6; i++){
       renderArray.push(<div className={object[`class${i+1}`]}>{object[`letter${i+1}`]}</div>)
     }
-    ;
+
     return renderArray;
   },
 };
