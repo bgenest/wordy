@@ -11,8 +11,19 @@ export const SessionNew = (props) => {
     createSession();
   }, []);
 
-  const getGames = ()=>{
-    setGame({id: 9999, answer: 'region', created_at: '', updated_at: ''})
+  const getGames = async () => {
+    try {
+      const response = await fetch(`/api/v1/games/99999`);
+      if (!response.ok) {
+        const errorMessage = `${response.status} (${response.statusText})`;
+        const error = new Error(errorMessage);
+        throw error;
+      }
+      const gameData = await response.json();
+      setGame(gameData);
+    } catch (error) {
+      console.error(`Error in fetch: ${error.message}`);
+    }
   };
 
   const createSession = async (event) => {
