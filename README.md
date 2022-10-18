@@ -31,13 +31,16 @@ Production: https://thewordygame.herokuapp.com/
 * New Game page allows for gameplay (similar to wordle).
 * previous games page allows viewing of previous games (only works while signed in).
 
-<img width="1461" alt="Screen Shot 2022-10-11 at 1 14 31 PM" src="https://user-images.githubusercontent.com/38561548/195157286-3dca9831-0e6a-413a-9956-ffd20f377464.png">
+<img width="1287" alt="Screen Shot 2022-10-18 at 4 39 28 PM" src="https://user-images.githubusercontent.com/38561548/196541408-72ebc892-f846-40b3-b1ec-3f9690065ef4.png">
 
-<img width="1068" alt="Screen Shot 2022-10-11 at 1 15 47 PM" src="https://user-images.githubusercontent.com/38561548/195157480-77f47c5f-8eb2-446f-bee1-f644b9a07fda.png">
+<img width="1284" alt="Screen Shot 2022-10-18 at 4 41 04 PM" src="https://user-images.githubusercontent.com/38561548/196541440-e02b4fda-1777-4510-989e-c0f5c12a93a6.png">
 
-<img width="1456" alt="Screen Shot 2022-10-11 at 1 19 16 PM" src="https://user-images.githubusercontent.com/38561548/195157882-ce89e590-0999-4a10-bc3f-8f8a9754e427.png">
+<img width="451" alt="Screen Shot 2022-10-18 at 4 41 33 PM" src="https://user-images.githubusercontent.com/38561548/196541449-48c7b171-5e84-4218-93cf-7b0c193a2cba.png">
 
-<img width="523" alt="Screen Shot 2022-10-11 at 1 18 19 PM" src="https://user-images.githubusercontent.com/38561548/195157653-124c8739-c744-427d-b0cc-c1400c8a77d8.png">
+<img width="1281" alt="Screen Shot 2022-10-18 at 4 46 33 PM" src="https://user-images.githubusercontent.com/38561548/196541462-3edc2376-57db-4ae2-ab67-cf2121db6610.png">
+
+<img width="981" alt="Screen Shot 2022-10-18 at 4 46 47 PM" src="https://user-images.githubusercontent.com/38561548/196541481-f3e3c187-8053-444e-aecc-3c5a3a49b617.png">
+
 
 
 
