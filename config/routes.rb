@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   resources :users, only: [:index, :create, :show, :new]
   resources :games, only: [:index, :create, :show, :new]
   resources :guesses, only: [:index, :create, :show, :new]
+  resources :errors, only: [:index]
 
   namespace :api do
     namespace :v1 do
