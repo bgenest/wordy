@@ -15,16 +15,19 @@ class Api::V1::GuessesController < ApplicationController
     game = params["game"]
     
     existing_session = Session.find_by("user": guess.user, "game_id": game["id"])
+
     if existing_session
       guess.session = existing_session
     else
       guess.session = Session.create("user": guess.user, "game_id": game["id"])
     end
+
     if guess.save
       render json: guess
     else
       render json: {error: guess.errors.full_messages}, status: :unprocessable_entity            
     end
+    
   end
 
   def new

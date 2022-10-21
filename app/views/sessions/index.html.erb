@@ -1,5 +1,4 @@
 <br/>
-
 <div class="">
    <div className="grid-container tile-container ">
       <div className="grid-x grid-padding-x grid-padding-y word-tile ">
@@ -25,7 +24,7 @@
             
             <div style="list-style-type:none" class="grid-x" id="guesses">
               <%session.guesses.each do |guess|%>
-
+              
               <%current_guess = GuessToRender.new(guess.word,session.game.answer)%>
               <%current_guess = current_guess.format_word%>
 
