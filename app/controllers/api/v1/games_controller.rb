@@ -4,14 +4,25 @@ class Api::V1::GamesController < ApplicationController
   def show
 
     daily_key = "99999"
+    random_index = rand(Game.count + 1)
+    game = params['id']
 
-    if params['id'] == daily_key
+
+    if game == daily_key
+      x = Session.where(game_id: daily_key, user_id: current_user.id)
+      if x.length > 0
+        Session.destroy(x[0].id)
+      end
       render json: Game.find(daily_key)
+
     else
-      random_index = rand(Game.count + 1)
+      x = Session.where(game_id: daily_key, user_id: current_user.id)
+      if x.length > 0
+        Session.destroy(x[0].id)
+      end
       render json: Game.find(random_index)
     end
-
+    
   end
 
 
