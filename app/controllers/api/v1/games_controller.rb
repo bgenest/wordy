@@ -19,7 +19,7 @@ class Api::V1::GamesController < ApplicationController
 
     else
       if current_user
-        x = Session.where(game_id: daily_key, user_id: current_user.id)
+        x = Session.where(game_id: random_index, user_id: current_user.id)
         if x.length > 0
           Session.destroy(x[0].id)
         end
