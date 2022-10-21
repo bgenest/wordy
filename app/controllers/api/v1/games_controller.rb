@@ -9,20 +9,25 @@ class Api::V1::GamesController < ApplicationController
 
 
     if game == daily_key
-      x = Session.where(game_id: daily_key, user_id: current_user.id)
-      if x.length > 0
-        Session.destroy(x[0].id)
+      if current_user
+        x = Session.where(game_id: daily_key, user_id: current_user.id)
+        if x.length > 0
+          Session.destroy(x[0].id)
+        end
       end
       render json: Game.find(daily_key)
 
     else
-      x = Session.where(game_id: daily_key, user_id: current_user.id)
-      if x.length > 0
-        Session.destroy(x[0].id)
+      if current_user
+        x = Session.where(game_id: daily_key, user_id: current_user.id)
+        if x.length > 0
+          Session.destroy(x[0].id)
+        end
       end
+
       render json: Game.find(random_index)
     end
-    
+
   end
 
 
