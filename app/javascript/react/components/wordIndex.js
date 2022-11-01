@@ -8,7 +8,7 @@ import { faQuestion } from "@fortawesome/free-solid-svg-icons";
 
 import WordComponent from "./WordComponent";
 import GameTypeTile from "./GameTypeTile"
-import helpers from "./helpers";
+import helpers from "../aux_files/helpers";
 
 
 export const wordIndex = (props) => {
