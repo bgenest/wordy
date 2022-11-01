@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 
-import helpers from "./helpers";
+import helpers from "../aux_files/helpers";
 import GuessTell from "./GuessTell";
-
 
 export const GuessNew = (props) => {
   const [currentguess, setCurrentGuess] = useState([]);

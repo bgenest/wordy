@@ -2,8 +2,6 @@ import React from "react";
 
 export const GameTypeTile = (props) => {
 
-
-
   return (
 <div className="grid-container tile-container" id ="game-option-tile">
   <div className="grid-x grid-padding-x grid-padding-y word-tile">
