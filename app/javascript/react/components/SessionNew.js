@@ -84,6 +84,9 @@ export const SessionNew = (props) => {
              <h1 className="float-center"id="gametype">
               Random Game
              </h1>
+          <div className="reset-button">
+             <a className="reset-button" href="/sessions/new">Click here to try again</a>
+          </div>
           </div>
         </div>
       </div>
